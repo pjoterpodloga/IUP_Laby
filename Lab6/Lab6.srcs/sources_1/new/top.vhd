@@ -43,7 +43,7 @@ end top;
 architecture Behavioral of top is
 
 constant mux_freq : integer := 1000;
-constant mux_period : integer := 1/mux_freq;
+constant mux_period : time := (1 / mux_freq * 1000) * 10ns;
 
 type anx_enum is (all_off, an0_on, an1_on, an2_on, an3_on, all_on);
 type btn_enum is (idle, save_seg0, save_seg1, save_seg2, save_seg3);
@@ -57,6 +57,8 @@ alias digit_seg1 : std_logic_vector(7 downto 0) is digit_anx(15 downto 8);
 alias digit_seg0 : std_logic_vector(7 downto 0) is digit_anx(7 downto 0);
 
 signal digit0, digit1, digit2, digit3 : std_logic_vector (3 downto 0);
+
+signal mux_clk : std_logic := '0';
 
 signal anx_state : anx_enum := all_off;
 
@@ -102,12 +104,13 @@ end function;
 
 begin
 
-    process(clk_i, rst_i)
+    mux_clk <= not mux_clk after mux_period;
+
+    process(mux_clk, rst_i)
     begin
         if rst_i = '1' then
            anx_state <= all_on;
-        elsif rising_edge(clk_i) then
-        
+        elsif rising_edge(mux_clk) then
             if anx_state = all_on then
                 anx_state <= an0_on;
             elsif anx_state = an0_on then
@@ -119,34 +122,23 @@ begin
             elsif anx_state = an3_on then
                 anx_state <= an0_on;
             end if;
-            
+        end if;
+        
+        if btn_i(0) = '1' then
+            digit0 <= sw_i(3 downto 0);
+        elsif btn_i(1) = '1' then
+            digit1 <= sw_i(3 downto 0);
+        elsif btn_i(2) = '1' then
+            digit2 <= sw_i(3 downto 0);
+        elsif btn_i(3) = '1' then
+            digit3 <= sw_i(3 downto 0);
         end if;
     end process;
     
-    process(clk_i, btn_i)
-    begin
-        if rising_edge(clk_i) then
-            if btn_i(0) = '1' then
-                digit0 <= sw_i(3 downto 0);
-            elsif btn_i(1) = '1' then
-                digit1 <= sw_i(3 downto 0);
-            elsif btn_i(2) = '1' then
-                digit2 <= sw_i(3 downto 0);
-            elsif btn_i(3) = '1' then
-                digit3 <= sw_i(3 downto 0);
-            end if;
-        end if;
-    end process;
-    
-    digit_seg0 <= hex2seg(digit0);
-    digit_seg1 <= hex2seg(digit1);
-    digit_seg2 <= hex2seg(digit2);
-    digit_seg3 <= hex2seg(digit3);
-    
-    digit_seg0(0) <= not sw_i(4);
-    digit_seg1(0) <= not sw_i(5);
-    digit_seg2(0) <= not sw_i(6);
-    digit_seg3(0) <= not sw_i(7);
+    digit_seg0 <= hex2seg(digit0) and not (7 downto 1 => '0',  0 => sw_i(4));
+    digit_seg1 <= hex2seg(digit1) and not (7 downto 1 => '0',  0 => sw_i(5));
+    digit_seg2 <= hex2seg(digit2) and not (7 downto 1 => '0',  0 => sw_i(6));
+    digit_seg3 <= hex2seg(digit3) and not (7 downto 1 => '0',  0 => sw_i(7));
     
     led7_an_o <= "1110" when (anx_state = an0_on)   else
                  "1101" when (anx_state = an1_on)   else
