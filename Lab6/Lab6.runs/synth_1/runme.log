@@ -1,0 +1,330 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16264 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 361.727 ; gain = 100.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'top' (1#1) [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:44]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[31]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[30]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[29]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[28]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[27]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[26]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[25]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[24]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[23]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[22]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[21]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[20]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[19]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[18]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[17]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[16]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[15]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[14]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[13]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[12]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[11]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[10]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[9]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[8]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[7]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[6]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[5]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[4]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[3]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[2]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[1]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 418.156 ; gain = 157.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 418.156 ; gain = 157.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 418.156 ; gain = 157.137
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-802] inferred FSM for state register 'anx_state_reg' in module 'top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE4 |                           000001 |                              000
+                 iSTATE0 |                           000010 |                              101
+                 iSTATE1 |                           000100 |                              001
+                 iSTATE2 |                           001000 |                              010
+                 iSTATE3 |                           010000 |                              011
+                  iSTATE |                           100000 |                              100
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'anx_state_reg' using encoding 'one-hot' in module 'top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 418.156 ; gain = 157.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 8     
+	   5 Input      6 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 8     
+	   5 Input      6 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[31]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[30]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[29]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[28]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[27]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[26]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[25]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[24]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[23]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[22]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[21]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[20]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[19]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[18]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[17]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[16]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[15]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[14]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[13]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[12]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[11]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[10]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[9]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[8]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[7]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[6]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[5]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[4]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[3]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[2]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[1]
+WARNING: [Synth 8-3331] design top has unconnected port digit_i[0]
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_anx_state_reg[0]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_54 with 1st driver pin 'i_54/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_54 with 2nd driver pin 'i_0/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:150]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_55 with 1st driver pin 'i_55/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_55 with 2nd driver pin 'i_1/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:149]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_56 with 1st driver pin 'i_56/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_56 with 2nd driver pin 'i_2/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:148]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_57 with 1st driver pin 'i_57/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin n_0_57 with 2nd driver pin 'i_3/O' [P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd:147]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     4|
+|3     |LUT2 |     7|
+|4     |LUT3 |     6|
+|5     |LUT4 |    10|
+|6     |LUT5 |    14|
+|7     |LUT6 |    21|
+|8     |FDCE |     4|
+|9     |FDPE |     1|
+|10    |FDRE |    16|
+|11    |IBUF |    14|
+|12    |OBUF |    12|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   110|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8 critical warnings and 65 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 573.883 ; gain = 312.863
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 675.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 65 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 675.281 ; gain = 425.277
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 675.281 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  1 17:34:07 2023...
