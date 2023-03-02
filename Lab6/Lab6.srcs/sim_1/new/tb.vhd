@@ -63,26 +63,32 @@ dut: top port map(
     led7_an_o => led7_an_o,
     led7_seg_o => led7_seg_o);
 
-    clk_i <= not clk_i after 10ns;
+    clk_i <= not clk_i after 5ns;
 
 stim: process
 begin
-    wait for 100ns;
-    sw_i <= "00001111";
+    wait for 10ns;
+    sw_i <= "10001000";
     btn_i(0) <= '1';
-    wait for 1ns;
-    sw_i <= "00001111";
+    wait for 10ns;
+    btn_i(0) <= '0';
+    sw_i <= "10000111";
     btn_i(1) <= '1';
-    wait for 1ns;
-    sw_i <= "00000000";
+    wait for 10ns;
+    btn_i(1) <= '0';
+    sw_i <= "10000001";
     btn_i(2) <= '1';
-    wait for 1ns;
-    sw_i <= "00001000";
+    wait for 10ns;
+    btn_i(2) <= '0';
+    sw_i <= "10001000";
     btn_i(3) <= '1';
-    wait for 1ns;
-    sw_i <= "10000000";
+    wait for 10ns;
+    btn_i(3) <= '0';
+    --sw_i <= "10000000";
     wait for 100ns;
-    
+    --rst_i <= '1';
+    wait for 50ns;
+    --rst_i <= '0';
     wait;
 end process;
 

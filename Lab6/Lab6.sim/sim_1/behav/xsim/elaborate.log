@@ -11,6 +11,8 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.enc_mem [enc_mem_default]
+Compiling architecture behavioral of entity xil_defaultlib.display [display_default]
 Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
 Compiling architecture behavioral of entity xil_defaultlib.tb
 Built simulation snapshot tb_behav

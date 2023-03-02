@@ -28,7 +28,11 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo p:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd
+read_vhdl -library xil_defaultlib {
+  P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/display.vhd
+  P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/enc_mem.vhd
+  P:/IUP/Projekty/Laby/IUP_Laby/Lab6/Lab6.srcs/sources_1/new/top.vhd
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
