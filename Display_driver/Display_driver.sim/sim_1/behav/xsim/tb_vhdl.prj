@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Display_driver.srcs/sources_1/new/display.vhd" \
+"../../../../Display_driver.srcs/sources_1/new/enc_mem.vhd" \
+"../../../../Display_driver.srcs/sources_1/new/top.vhd" \
+"../../../../Display_driver.srcs/sim_1/new/tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,24 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Stopped at time : 0 fs : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/enc_mem.vhd" Line 102
+Stopped at time : 135 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/enc_mem.vhd" Line 105
+Stopped at time : 5140 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5150 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5150 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5150 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 96
+Stopped at time : 5160 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5170 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5170 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5170 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 96
+Stopped at time : 5180 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5190 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5190 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5190 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 96
+Stopped at time : 5200 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5210 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5210 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5210 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 96
+Stopped at time : 5220 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 79
+Stopped at time : 5230 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 80
+Stopped at time : 5250 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 80
+Stopped at time : 5270 ns : File "P:/IUP/Projekty/Laby/IUP_Laby/Display_driver/Display_driver.srcs/sources_1/new/display.vhd" Line 80

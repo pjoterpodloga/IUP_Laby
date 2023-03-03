@@ -41,7 +41,7 @@ end display;
 
 architecture Behavioral of display is
 
-    constant mux_freq : integer := 10000000;
+    constant mux_freq : integer := 1000;
     constant clk_freq : integer := 100000000;
     constant clk_div  : integer := clk_freq / mux_freq;
     

@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Stopwatch.srcs/sources_1/imports/new/display.vhd" \
+"../../../../Stopwatch.srcs/sources_1/new/divider.vhd" \
+"../../../../Stopwatch.srcs/sources_1/new/stopwatch.vhd" \
+"../../../../Stopwatch.srcs/sources_1/new/top.vhd" \
+"../../../../Stopwatch.srcs/sim_1/new/tb_top.vhd" \
+
+# Do not sort compile order
+nosort
