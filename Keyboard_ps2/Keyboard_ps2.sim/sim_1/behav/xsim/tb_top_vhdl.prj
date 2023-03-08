@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Keyboard_ps2.srcs/sources_1/new/sign_mem.vhd" \
+"../../../../Keyboard_ps2.srcs/sources_1/new/ps2_controller.vhd" \
+"../../../../Keyboard_ps2.srcs/sources_1/new/top.vhd" \
+"../../../../Keyboard_ps2.srcs/sources_1/new/display.vhd" \
+"../../../../Keyboard_ps2.srcs/sim_1/new/tb_ps2_controller.vhd" \
+"../../../../Keyboard_ps2.srcs/sim_1/new/tb_top.vhd" \
+
+# Do not sort compile order
+nosort

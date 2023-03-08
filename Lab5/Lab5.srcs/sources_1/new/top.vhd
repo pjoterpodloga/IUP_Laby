@@ -40,12 +40,12 @@ end top;
 
 architecture Behavioral of top is
 
-signal q : integer := 0;
+signal q : integer range N_div * 2 downto 0 := 0;
 signal last_state : std_logic := '0';
 
 begin
 
-    process(clk_i, rst_i)
+    process(clk_i, rst_i, last_state, q)
     begin
         if rst_i = '1' then
             q <= 0;
