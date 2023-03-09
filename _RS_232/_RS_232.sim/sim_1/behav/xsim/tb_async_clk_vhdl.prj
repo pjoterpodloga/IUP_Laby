@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../_RS_232.srcs/sources_1/new/async_clk.vhd" \
+"../../../../_RS_232.srcs/sim_1/new/tb_async_clk.vhd" \
+
+# Do not sort compile order
+nosort
