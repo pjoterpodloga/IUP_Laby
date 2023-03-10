@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sources_1/new/rs232_controller.vhd" \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sources_1/new/async_clk.vhd" \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sources_1/new/top.vhd" \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sources_1/new/process_mngnt.vhd" \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sources_1/new/sum.vhd" \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sim_1/new/tb_async_clk.vhd" \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sim_1/new/tb_controller.vhd" \
+"../../../../_RS_232_VIVADO_2022_2.srcs/sim_1/new/tb_top.vhd" \
+
+# Do not sort compile order
+nosort
