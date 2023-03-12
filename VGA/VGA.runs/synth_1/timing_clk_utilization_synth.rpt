@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Mar 12 12:27:56 2023
+| Date         : Sun Mar 12 13:12:26 2023
 | Host         : DESKTOP-G1E6JH8 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file timing_clk_utilization_synth.rpt -pb timing_clk_utilization_synth.pb
 | Design       : timing_clk
@@ -149,13 +149,13 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   28 |        Flop & Latch |
-| LUT4     |   19 |                 LUT |
-| LUT2     |   14 |                 LUT |
+| LUT4     |   21 |                 LUT |
+| LUT2     |   13 |                 LUT |
 | CARRY4   |   13 |          CarryLogic |
-| LUT3     |    8 |                 LUT |
+| LUT5     |    7 |                 LUT |
 | LUT1     |    7 |                 LUT |
 | LDCE     |    7 |        Flop & Latch |
-| LUT5     |    6 |                 LUT |
+| LUT3     |    6 |                 LUT |
 | FDCE     |    5 |        Flop & Latch |
 | OBUF     |    3 |                  IO |
 | IBUF     |    1 |                  IO |

@@ -83,7 +83,7 @@ signal  pixel_clk_q : natural range 2*PIXEL_NDIV downto 0 := 0;
 signal  pixel_clk_last_state : std_logic := '0';
 signal  pixel_diff  : std_logic;
 
-signal  h_state : horizontal_enum   := H_SYNC;
+signal  h_state : horizontal_enum   := H_WAITING;
 signal  h_p     : natural range 2*H_AVT_NDIV downto 0 := 0;  
 signal  h_q     : natural range 2*V_AVT_NDIV downto 0 := 0;
 signal  h_last_state : std_logic := '0';
@@ -91,7 +91,7 @@ signal  h_diff  : std_logic;
 signal  h_div   : natural range H_AVT_NDIV downto 0 := 0;
 signal  h_strobe: std_logic := '0';
 
-signal  v_state : vertical_enum     := V_SYNC;
+signal  v_state : vertical_enum     := V_F_PORCH;
 signal  v_p     : natural range 2*H_AVT_NDIV downto 0 := 0;  
 signal  v_q     : natural range 2*V_AVT_NDIV downto 0 := 0;
 signal  v_last_state : std_logic := '0';
@@ -134,7 +134,7 @@ begin
     if (h_q >= 2*h_div) or (h_state = H_WAITING) then
         h_q <= 0;
         
-        if h_state = H_WAITING then
+        if h_state = H_WAITING and h_strobe = '1' then
             h_state <= H_SYNC;
         elsif h_state = H_SYNC then
             h_state <= H_F_PORCH;
