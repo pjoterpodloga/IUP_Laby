@@ -1,0 +1,2 @@
+vga_bitmap.v,verilog,xil_defaultlib,../../../../VGA.gen/sources_1/ip/vga_bitmap/sim/vga_bitmap.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
