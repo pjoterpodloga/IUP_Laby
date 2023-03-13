@@ -32,7 +32,6 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity top is
-    generic ( N_div : integer := 4 );
     Port (  clk_i : in STD_LOGIC;
             rst_i : in STD_LOGIC;
             led_o : out STD_LOGIC);
@@ -40,25 +39,38 @@ end top;
 
 architecture Behavioral of top is
 
-signal q : integer range N_div * 2 downto 0 := 0;
+constant CLK_FREQ : natural := 100E6;
+constant OUT_FREQ : natural := 1;
+
+constant N_DIV : natural := CLK_FREQ / OUT_FREQ; 
+--constant N_DIV : natural := 33;
+
+signal q : natural range 2 * N_DIV + 1 downto 0 := 0;
+signal p : natural range 2 * N_DIV + 1 downto 0;
 signal last_state : std_logic := '0';
+signal diff : std_logic;
 
 begin
 
-    process(clk_i, rst_i, last_state, q)
+    diff <= clk_i xor last_state;
+    p <= q + 1;
+
+    process(clk_i, rst_i, diff, q)
     begin
+    
         if rst_i = '1' then
             q <= 0;
-        elsif last_state /= clk_i then
+        elsif rising_edge(diff) then
             last_state <= clk_i;
-            q <= q + 1;
+            q <= p;
         end if;
         
-        if q >= (N_div * 2) - 1 then
+        if q >= (N_DIV * 2) then
             q <= 0;
-        end if;        
+        end if;
+                
     end process;    
     
-    led_o <= '1' when (q < N_div) else '0';
+    led_o <= '0' when (q < N_DIV) else '1';
     
 end Behavioral;
