@@ -46,7 +46,7 @@ architecture Behavioral of timing_clk is
 constant VGA_HEIGHT : natural := 480;
 constant VGA_WIDTH  : natural := 640;
 
-constant CLK_FREQ   : real  := 100.0E9;
+constant CLK_FREQ   : real  := 100.0E6;
 constant CLK_PERIOD : time  := 10ns;
 
 constant PIXEL_CLK  : real  :=  25.175E9;
@@ -108,7 +108,7 @@ pixel_clk_o <= '0' when pixel_clk_q < PIXEL_NDIV else '1';
 pixel_clock: process(pixel_diff, pixel_clk_en, pixel_clk_q)
 begin
 
-    if pixel_clk_q >= 2*PIXEL_NDIV then
+    if pixel_clk_q = 2*PIXEL_NDIV then
         pixel_clk_q <= 0;
     end if;
     
@@ -122,29 +122,29 @@ begin
     
 end process;
 
-h_diff  <= (clk_i xor h_last_state) and h_strobe;
+h_diff  <= (clk_i xor h_last_state);
 h_p     <= h_q + 1;
 
 h_div   <=  H_AVT_NDIV  when h_state = H_VIDEO      else
             H_FP_NDIV   when h_state = H_F_PORCH    else
             H_BP_NDIV   when h_state = H_B_PORCH    else H_SPT_NDIV;
 
-hor_state: process(h_diff, h_q, h_state)
+hor_state: process(h_diff, h_div, h_strobe, h_q, h_state)
 begin
-    if (h_q >= 2*h_div) or (h_state = H_WAITING) then
+    if (h_q = 2*h_div) or (h_state = H_WAITING) then
         h_q <= 0;
         
         if h_state = H_WAITING and h_strobe = '1' then
             h_state <= H_SYNC;
         elsif h_state = H_SYNC then
-            h_state <= H_F_PORCH;
-            pixel_clk_en <= '1';
-        elsif h_state = H_F_PORCH then
-            h_state <= H_VIDEO;
-        elsif h_state = H_VIDEO then
             h_state <= H_B_PORCH;
-            pixel_clk_en <= '0';
         elsif h_state = H_B_PORCH then
+            h_state <= H_VIDEO;
+            pixel_clk_en <= '1';
+        elsif h_state = H_VIDEO then
+            h_state <= H_F_PORCH;
+            pixel_clk_en <= '0';
+        elsif h_state = H_F_PORCH then
             h_state <= H_WAITING;
         end if;
     end if;
@@ -164,9 +164,9 @@ v_div   <=  V_AVT_NDIV  when v_state = V_VIDEO      else
             V_FP_NDIV   when v_state = V_F_PORCH    else
             V_BP_NDIV   when v_state = V_B_PORCH    else V_SPT_NDIV;
 
-ver_state: process(v_diff, v_q, v_state)
+ver_state: process(v_diff,v_div, v_q, v_state)
 begin
-    if v_q >= 2*v_div then
+    if v_q = 2*v_div then
         v_q <= 0;
         
         if v_state = V_SYNC then

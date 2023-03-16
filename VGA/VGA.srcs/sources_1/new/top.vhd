@@ -48,12 +48,31 @@ signal clka  : std_logic;
 signal addra : std_logic_vector (13 downto 0);
 signal douta : std_logic_vector (7  downto 0);
 
+component timing_clk is
+    Port ( 
+        clk_i           : in    std_logic;
+        pixel_clk_o     : out   std_logic;
+        hsync           : out   std_logic;
+        vsync           : out   std_logic); 
+end component timing_clk;
+
+signal clk_i        : std_logic;
+signal pixel_clk_o  : std_logic;
+signal hsync        : std_logic;
+signal vsync        : std_logic;
+
 begin
 
 bitmap: vga_bitmap port map (
-                    clka => clka,
-                    addra => addra,
-                    douta => douta);
+    clka        => clka,
+    addra       => addra,
+    douta       => douta);
+                    
+timings: timing_clk port map (
+    clk_i       => clk_i,
+    pixel_clk_o => pixel_clk_o,
+    hsync       => hsync,
+    vsync       => vsync);
 
 
 end Behavioral;
