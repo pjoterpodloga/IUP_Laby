@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Sat Mar 11 16:56:27 2023
+-- Date        : Sat Mar 11 16:56:26 2023
 -- Host        : DESKTOP-G1E6JH8 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               j:/Kody/vhdl/IUP_Laby/VGA/VGA.gen/sources_1/ip/vga_bitmap/vga_bitmap_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top vga_bitmap -prefix
+--               vga_bitmap_ vga_bitmap_stub.vhdl
 -- Design      : vga_bitmap
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

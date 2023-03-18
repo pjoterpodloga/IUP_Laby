@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='J:/Kody/vhdl/IUP_Laby/VGA/VGA.runs/synth_1'
+HD_PWD='P:/IUP/Projekty/Laby/IUP_Laby/VGA/VGA.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log timing_clk.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source timing_clk.tcl
+EAStep vivado -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl

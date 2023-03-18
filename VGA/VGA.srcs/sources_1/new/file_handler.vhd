@@ -40,6 +40,7 @@ entity file_handler is
         G_o     : out   std_logic;
         B_o     : out   std_logic;
         sw_i    : in    std_logic_vector (3 downto 0);
+        btn_i   : in    std_logic_vector (3 downto 0);
         clk_p   : in    std_logic;
         hsync_i : in    std_logic;
         vsync_i : in    std_logic;
@@ -103,21 +104,6 @@ constant IMAGE_MAX_Y_OFFSET :   natural := DISPLAY_HEIGHT - IMAGE_HEIGHT;
 
 constant READS_PER_LINE     :   natural := IMAGE_WIDTH / 2;
 
-
-signal Y_line   :   natural := 0;
-
-signal X_disp   :   natural := 0;
-signal Y_disp   :   natural := 0;
-
-signal v_reset  :   std_logic;
-signal h_reset  :   std_logic;
-signal h_load   :   std_logic;
-
-type color_array is array (IMAGE_WIDTH downto 0) of std_logic_vector(2 downto 0);
--- 0: Red | 1: Green | 2: Blue
-
-signal C_array :    color_array;
-
 function color_select(img_data: in std_logic_vector(3 downto 0)) 
     return std_logic_vector is variable RGB_o : std_logic_vector(2 downto 0);  
 begin
@@ -163,96 +149,111 @@ begin
     return RGB_o;
 end;
 
+type color_array is array (IMAGE_WIDTH downto 0) of std_logic_vector(2 downto 0);
+-- 0: Red | 1: Green | 2: Blue
+type bg_img_enum is (background, image);
+
+signal bg_img_state : bg_img_enum;
+
+signal C_array :    color_array;
+
+signal pixel_it : natural := 0;
+
+signal X_disp   : natural := 0;
+signal Y_disp   : natural := 0;
+
+signal X_img    : natural := 0;
+signal Y_img    : natural := 0;
+
+signal s_load   : std_logic;
+signal r_load   : std_logic;
+
+signal bg_color : std_logic_vector (2 downto 0);
+
+signal image_load_en : std_logic := '0';
+
+signal file_count   : natural := 0;
+signal r_file_count : std_logic := '0';
+
 begin
 
-inc_X_disp: process(clk_p, h_reset)
+line_count: process(clk_i, file_count)
 begin
 
-    if h_reset = '1' then
-        X_disp <= 0;
-    elsif falling_edge(clk_p) then
-        X_disp <= X_disp + 1;
-    end if;
-end process;
-
-inc_Y_disp: process(hsync_i, v_reset)
-begin
-
-    if v_reset = '1' then
-        Y_disp <= 0;
-    elsif falling_edge(hsync_i) then
-        Y_disp <= Y_disp + 1;
-    end if;
-end process;
-
-vsync_reset: process(vsync_i, hsync_i)
-begin
-
-    if hsync_i = '0' then
-        v_reset <= '0';
-    elsif falling_edge(vsync_i) then
-        v_reset <= '1';
-    end if;
-
-end process;
-
-hsync_load: process(hsync_i)
-begin
-
-    if hsync_i = '1' then
-        h_reset <= '1';
-        h_load <= '0';
-    elsif falling_edge(hsync_i) then
-        h_reset <= '0';
-        if Y_line /= IMAGE_HEIGHT then
-            h_load <= '1';
+    if r_file_count = '1' then
+        file_count <= 0;
+    elsif rising_edge(clk_i) then
+        if file_count /= IMAGE_WIDTH then
+            file_count <= file_count + 1;
         end if;
-        
     end if;
 
 end process;
 
-load_line: process(clk_i, h_load, v_reset)
-variable x : natural := 0;
-variable c_it : natural range IMAGE_WIDTH downto 0 := 0;
-variable c_data: std_logic_vector (3 downto 0);
+image_detect: process(X_disp, Y_disp, X_img, Y_img)
 begin
 
-    if v_reset = '1' then
-        Y_line <=  0;
-    elsif rising_edge(h_load) then
-    
-        while x /= READS_PER_LINE loop
-            addr_o <= std_logic_vector(to_unsigned(BMP_FILE_IH_OFFSET + x + Y_line * READS_PER_LINE, addr_o'length));        
-            if clk_i = '0' then
-                clk_o <= '0';
-            
-            elsif rising_edge(clk_i) then
-                clk_o <= '1';
-                
-                for k in 0 to 1 loop
-                    
-                    if k = 0 then
-                        c_data := pixel_L;
-                    else
-                        c_data := pixel_H;
-                    end if;
-                    
-                    C_array(c_it) <= color_select(c_data);
-                    
-                    c_it := c_it + 1;
-                end loop;
-            
-            end if;
-            
-        end loop;
-    
+    if rising_edge(clk_p) then
+        if (X_disp >= X_img and X_disp < X_img + IMAGE_WIDTH)  or
+           (Y_disp >= Y_img and Y_disp < Y_img + IMAGE_HEIGHT) then
+            bg_img_state <= image;
+        else
+            bg_img_state <= background;
+        end if;
     end if;
 
 end process;
 
-R_o <= C_array(X_disp)(0);
-G_o <= C_array(X_disp)(1);
-B_o <= C_array(X_disp)(2);
+move_image: process(vsync_i, btn_i)
+begin
+
+    if falling_edge(vsync_i) then
+        if btn_i(0) = '1' then
+            if X_img /= 0 then
+                X_img <= X_img - 1;
+            end if;
+        elsif btn_i(1) = '1' then
+            if Y_img /= 0 then
+                Y_img <= Y_img - 1;
+            end if;           
+        elsif btn_i(2) = '1' then
+            if Y_img /= IMAGE_MAX_Y_OFFSET then
+                Y_img <= Y_img + 1;
+            end if; 
+        elsif btn_i(3) = '1' then    
+            if X_img /= IMAGE_MAX_X_OFFSET then
+                X_img <= X_img + 1;
+            end if;
+        end if;
+    end if;
+
+end process;
+
+load_data: process(s_load, r_load)
+begin
+
+    if rising_edge(s_load) then  
+
+        C_array(pixel_it) <= color_select(data_i(7 downto 4));
+        C_array(pixel_it + 1) <= color_select(data_i(3 downto 0));
+            
+    end if;
+    
+end process;
+
+clk_o  <= clk_i;
+addr_o <= std_logic_vector(to_unsigned(BMP_FILE_IH_OFFSET + X_img + (Y_img * READS_PER_LINE), addr_o'length));
+
+bg_color <=     "110"   when    sw_i = "000"    else
+                "110"   when    sw_i = "001"    else
+                "010"   when    sw_i = "010"    else
+                "011"   when    sw_i = "011"    else
+                "001"   when    sw_i = "100"    else
+                "101"   when    sw_i = "101"    else
+                "111"   when    sw_i = "110"    else    "000";                
+
+R_o <= C_array(X_disp)(0)   when    bg_img_state = image    else    bg_color(0);
+G_o <= C_array(X_disp)(1)   when    bg_img_state = image    else    bg_color(1);
+B_o <= C_array(X_disp)(2)   when    bg_img_state = image    else    bg_color(2);
 
 end Behavioral;

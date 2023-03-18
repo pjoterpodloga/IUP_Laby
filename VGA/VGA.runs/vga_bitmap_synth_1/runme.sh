@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='J:/Kody/vhdl/IUP_Laby/VGA/VGA.runs/vga_bitmap_synth_1'
+HD_PWD='P:/IUP/Projekty/Laby/IUP_Laby/VGA/VGA.runs/vga_bitmap_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

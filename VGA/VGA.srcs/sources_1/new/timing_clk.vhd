@@ -36,8 +36,8 @@ entity timing_clk is
     Port ( 
         clk_i           : in    std_logic;
         pixel_clk_o     : out   std_logic;
-        hsync           : out   std_logic;
-        vsync           : out   std_logic);
+        hsync_o         : out   std_logic;
+        vsync_o         : out   std_logic);
         
 end timing_clk;
 
@@ -189,8 +189,8 @@ begin
 
 end process;
 
-hsync <= '0' when h_state = H_SYNC else '1';
-vsync <= '0' when v_state = V_SYNC else '1';
+hsync_o <= '0' when h_state = H_SYNC else '1';
+vsync_o <= '0' when v_state = V_SYNC else '1';
 
 
 end Behavioral;

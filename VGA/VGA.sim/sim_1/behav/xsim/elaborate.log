@@ -1,6 +1,6 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -11,7 +11,18 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
 Compiling module xil_defaultlib.glbl
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="art...
+Compiling module xil_defaultlib.vga_bitmap
 Compiling architecture behavioral of entity xil_defaultlib.timing_clk [timing_clk_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_timing_clk
-Built simulation snapshot tb_timing_clk_behav
+Compiling architecture behavioral of entity xil_defaultlib.vga_controller [vga_controller_default]
+Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_top
+Built simulation snapshot tb_top_behav
