@@ -1,0 +1,256 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Mon Mar 20 19:45:01 2023
+| Host         : DESKTOP-SM94CAU running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_top
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 40
++-----------+------------------+------------------------------+------------+
+| Rule      | Severity         | Description                  | Violations |
++-----------+------------------+------------------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree        | 3          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell  | 33         |
+| LUTAR-1   | Warning          | LUT drives async reset alert | 4          |
++-----------+------------------+------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT deboun/div/last_state_i_2__1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT disp/div/last_state_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#3 Critical Warning
+LUT on the clock tree  
+The LUT sw/div/last_state_i_2__0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/debounce_q_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin deboun/pass_signal_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin disp/FSM_sequential_an_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin disp/FSM_sequential_an_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/FSM_onehot_sw_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/FSM_onehot_sw_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/FSM_onehot_sw_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/FSM_onehot_sw_state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_01_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_01_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_01_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_01_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_10_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_10_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_10_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/millis_10_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_01_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_01_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_01_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_01_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_10_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_10_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_10_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin sw/seconds_10_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell deboun/div/d_q[0]_i_2__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) deboun/div/d_q_reg[14]/CLR, deboun/div/d_q_reg[15]/CLR,
+deboun/div/d_q_reg[16]/CLR, deboun/div/d_q_reg[17]/CLR,
+deboun/div/d_q_reg[18]/CLR, deboun/div/d_q_reg[19]/CLR,
+deboun/div/d_q_reg[1]/CLR, deboun/div/d_q_reg[2]/CLR,
+deboun/div/d_q_reg[3]/CLR, deboun/div/d_q_reg[4]/CLR,
+deboun/div/d_q_reg[5]/CLR, deboun/div/d_q_reg[6]/CLR,
+deboun/div/d_q_reg[7]/CLR, deboun/div/d_q_reg[8]/CLR,
+deboun/div/d_q_reg[9]/CLR (the first 15 of 20 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell disp/div/d_q[0]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) disp/div/d_q_reg[12]/CLR, disp/div/d_q_reg[13]/CLR,
+disp/div/d_q_reg[14]/CLR, disp/div/d_q_reg[15]/CLR,
+disp/div/d_q_reg[16]/CLR, disp/div/d_q_reg[17]/CLR,
+disp/div/d_q_reg[1]/CLR, disp/div/d_q_reg[2]/CLR, disp/div/d_q_reg[3]/CLR,
+disp/div/d_q_reg[4]/CLR, disp/div/d_q_reg[5]/CLR, disp/div/d_q_reg[6]/CLR,
+disp/div/d_q_reg[7]/CLR, disp/div/d_q_reg[8]/CLR, disp/div/d_q_reg[9]/CLR
+ (the first 15 of 18 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell sw/FSM_onehot_sw_state[3]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sw/FSM_onehot_sw_state_reg[0]/PRE, sw/FSM_onehot_sw_state_reg[1]/CLR,
+sw/FSM_onehot_sw_state_reg[2]/CLR, sw/FSM_onehot_sw_state_reg[3]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell sw/div/d_q[0]_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) sw/div/d_q_reg[15]/CLR, sw/div/d_q_reg[16]/CLR, sw/div/d_q_reg[17]/CLR,
+sw/div/d_q_reg[18]/CLR, sw/div/d_q_reg[19]/CLR, sw/div/d_q_reg[1]/CLR,
+sw/div/d_q_reg[20]/CLR, sw/div/d_q_reg[2]/CLR, sw/div/d_q_reg[3]/CLR,
+sw/div/d_q_reg[4]/CLR, sw/div/d_q_reg[5]/CLR, sw/div/d_q_reg[6]/CLR,
+sw/div/d_q_reg[7]/CLR, sw/div/d_q_reg[8]/CLR, sw/div/d_q_reg[9]/CLR
+ (the first 15 of 21 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+

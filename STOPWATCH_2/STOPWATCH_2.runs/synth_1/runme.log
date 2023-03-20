@@ -1,0 +1,306 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16800
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1218.684 ; gain = 405.660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd:42]
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_MUX bound to: 1000 - type: integer 
+INFO: [Synth 8-3491] module 'display' declared at 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/display.vhd:34' bound to instance 'disp' of component 'display' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'display' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/display.vhd:45]
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_MUX bound to: 1000 - type: integer 
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_OUT bound to: 1000 - type: integer 
+INFO: [Synth 8-3491] module 'divider' declared at 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:34' bound to instance 'div' of component 'divider' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/display.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'divider' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:44]
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_OUT bound to: 1000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'display' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/display.vhd:45]
+INFO: [Synth 8-3491] module 'encoder' declared at 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/encoder.vhd:34' bound to instance 'enc' of component 'encoder' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'encoder' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/encoder.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'encoder' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/encoder.vhd:40]
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'stopwatch' declared at 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/stopwatch.vhd:34' bound to instance 'sw' of component 'stopwatch' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'stopwatch' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/stopwatch.vhd:43]
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_OUT bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'divider' declared at 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:34' bound to instance 'div' of component 'divider' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/stopwatch.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized1' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:44]
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_OUT bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized1' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'stopwatch' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/stopwatch.vhd:43]
+	Parameter BTN_DOWN_TIME bound to: 64'b0000000000000000001011010111100110001000001111010010000000000000 
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/debounce.vhd:34' bound to instance 'deboun' of component 'debounce' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'debounce' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/debounce.vhd:44]
+	Parameter BTN_DOWN_TIME bound to: 64'b0000000000000000001011010111100110001000001111010010000000000000 
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_OUT bound to: 200 - type: integer 
+INFO: [Synth 8-3491] module 'divider' declared at 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:34' bound to instance 'div' of component 'divider' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/debounce.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized3' [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:44]
+	Parameter FREQ_IN bound to: 100000000 - type: integer 
+	Parameter FREQ_OUT bound to: 200 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized3' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/debounce.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd:42]
+WARNING: [Synth 8-7129] Port rst_i in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.406 ; gain = 498.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.406 ; gain = 498.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.406 ; gain = 498.383
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1311.406 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/constrs_1/new/const.xdc]
+Finished Parsing XDC File [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/constrs_1/new/const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1402.148 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1402.148 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'an_state_reg' in module 'display'
+INFO: [Synth 8-802] inferred FSM for state register 'sw_state_reg' in module 'stopwatch'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                              001
+                 iSTATE2 |                               01 |                              010
+                 iSTATE3 |                               10 |                              011
+                  iSTATE |                               11 |                              100
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'an_state_reg' using encoding 'sequential' in module 'display'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               11
+*
+                 iSTATE0 |                             0010 |                               00
+                 iSTATE1 |                             0100 |                               01
+                  iSTATE |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sw_state_reg' using encoding 'one-hot' in module 'stopwatch'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   21 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               21 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 7     
+	   3 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port rst_i in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    16|
+|2     |LUT1   |     6|
+|3     |LUT2   |    15|
+|4     |LUT3   |    14|
+|5     |LUT4   |    24|
+|6     |LUT5   |    18|
+|7     |LUT6   |    50|
+|8     |FDCE   |    62|
+|9     |FDPE   |     1|
+|10    |FDRE   |    32|
+|11    |IBUF   |     2|
+|12    |OBUF   |    12|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1402.148 ; gain = 498.383
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1402.148 ; gain = 589.125
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1402.148 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1402.148 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: c219f9c6
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1402.148 ; gain = 1008.043
+INFO: [Common 17-1381] The checkpoint 'P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 20 19:42:01 2023...

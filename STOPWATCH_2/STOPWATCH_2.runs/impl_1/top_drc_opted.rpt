@@ -1,0 +1,96 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Mon Mar 20 19:44:31 2023
+| Host         : DESKTOP-SM94CAU running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+| Design       : top
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_top
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 6
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 6          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT deboun/div/debounce_q[9]_i_3 is driving clock pin of 11 cells. This could lead to large hold time violations. Involved cells are:
+deboun/debounce_q_reg[0], deboun/debounce_q_reg[1],
+deboun/debounce_q_reg[2], deboun/debounce_q_reg[3],
+deboun/debounce_q_reg[4], deboun/debounce_q_reg[5],
+deboun/debounce_q_reg[6], deboun/debounce_q_reg[7],
+deboun/debounce_q_reg[8], deboun/debounce_q_reg[9], deboun/pass_signal_reg
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT deboun/div/last_state_i_2__1 is driving clock pin of 21 cells. This could lead to large hold time violations. Involved cells are:
+deboun/div/d_q_reg[0], deboun/div/d_q_reg[10], deboun/div/d_q_reg[11],
+deboun/div/d_q_reg[12], deboun/div/d_q_reg[13], deboun/div/d_q_reg[14],
+deboun/div/d_q_reg[15], deboun/div/d_q_reg[16], deboun/div/d_q_reg[17],
+deboun/div/d_q_reg[18], deboun/div/d_q_reg[19], deboun/div/d_q_reg[1],
+deboun/div/d_q_reg[2], deboun/div/d_q_reg[3], deboun/div/d_q_reg[4]
+ (the first 15 of 21 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT disp/div/FSM_sequential_an_state[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+disp/FSM_sequential_an_state_reg[0], disp/FSM_sequential_an_state_reg[1]
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT disp/div/last_state_i_2 is driving clock pin of 19 cells. This could lead to large hold time violations. Involved cells are:
+disp/div/d_q_reg[0], disp/div/d_q_reg[10], disp/div/d_q_reg[11],
+disp/div/d_q_reg[12], disp/div/d_q_reg[13], disp/div/d_q_reg[14],
+disp/div/d_q_reg[15], disp/div/d_q_reg[16], disp/div/d_q_reg[17],
+disp/div/d_q_reg[1], disp/div/d_q_reg[2], disp/div/d_q_reg[3],
+disp/div/d_q_reg[4], disp/div/d_q_reg[5], disp/div/d_q_reg[6]
+ (the first 15 of 19 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT sw/div/last_state_i_2__0 is driving clock pin of 22 cells. This could lead to large hold time violations. Involved cells are:
+sw/div/d_q_reg[0], sw/div/d_q_reg[10], sw/div/d_q_reg[11],
+sw/div/d_q_reg[12], sw/div/d_q_reg[13], sw/div/d_q_reg[14],
+sw/div/d_q_reg[15], sw/div/d_q_reg[16], sw/div/d_q_reg[17],
+sw/div/d_q_reg[18], sw/div/d_q_reg[19], sw/div/d_q_reg[1],
+sw/div/d_q_reg[20], sw/div/d_q_reg[2], sw/div/d_q_reg[3]
+ (the first 15 of 22 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT sw/div/millis_01[3]_i_2 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+sw/millis_01_reg[0], sw/millis_01_reg[1], sw/millis_01_reg[2],
+sw/millis_01_reg[3], sw/millis_10_reg[0], sw/millis_10_reg[1],
+sw/millis_10_reg[2], sw/millis_10_reg[3], sw/seconds_01_reg[0],
+sw/seconds_01_reg[1], sw/seconds_01_reg[2], sw/seconds_01_reg[3],
+sw/seconds_10_reg[0], sw/seconds_10_reg[1], sw/seconds_10_reg[2]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+
