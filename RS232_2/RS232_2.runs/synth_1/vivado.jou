@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Mar 25 19:33:09 2023
+# Process ID: 23628
+# Current directory: P:/IUP/Projekty/Laby/IUP_Laby/RS232_2/RS232_2.runs/synth_1
+# Command line: vivado.exe -log divider.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source divider.tcl
+# Log file: P:/IUP/Projekty/Laby/IUP_Laby/RS232_2/RS232_2.runs/synth_1/divider.vds
+# Journal file: P:/IUP/Projekty/Laby/IUP_Laby/RS232_2/RS232_2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-SM94CAU, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16480 MB
+#-----------------------------------------------------------
+source divider.tcl -notrace
