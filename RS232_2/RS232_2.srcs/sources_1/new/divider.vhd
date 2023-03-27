@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity divider is
     Generic (
         FREQ_IN         :   natural :=  100E6;
-        FREQ_OUT        :   natural :=  1E6;
+        FREQ_OUT        :   natural :=  10E6;
         INCLUDE_ENABLE  :   boolean :=  false);
     Port ( 
         clk_i   :   in  std_logic;
@@ -46,45 +46,54 @@ architecture Behavioral of divider is
 
 constant    NDIV    :   natural := FREQ_IN  / FREQ_OUT;
 
-signal d_q      :   natural range 2*NDIV downto 0   := 0;
-signal d_p      :   natural range 2*NDIV downto 0;
-signal d_lstate :   std_logic := '0';
-signal d_diff   :   std_logic;
+signal d_nq     :   natural range NDIV downto 0   := 0;
+signal d_pq     :   natural range NDIV downto 0   := 0;
+
+signal d_q_sum  :   natural range NDIV downto 0;
 
 signal d_enable :   std_logic   := '1';
 
+signal d_q_rst  :   boolean;
 signal o_state  :   boolean;
 
+begin 
+
+d_q_rst <= true when d_nq = NDIV and d_pq = NDIV else false;
+
+div_p: process(clk_i, d_q_rst)
 begin
-
-d_diff  <= clk_i xor d_lstate;
-
-div: process(d_diff, d_q)
-begin
-
-    if (d_q = 2*NDIV) or (d_enable = '0') then
-        d_lstate    <= '0';
-        d_q         <= 0;
-    elsif rising_edge(d_diff) then
-        d_lstate    <= clk_i;
-        d_q         <= d_p;
+    if d_q_rst then
+        d_pq <= 0;
+    elsif rising_edge(clk_i) then
+        d_pq <= d_pq + 1;
     end if;
-
 end process;
 
-state: process(d_q)
+div_n: process(clk_i, d_q_rst)
 begin
-    if (d_q = NDIV) then
-        o_state <=  true;
-    elsif (d_q = 0) then
-        o_state <=  false;
+    
+    if d_q_rst then
+        d_nq <= 0;
+    elsif falling_edge(clk_i) then
+        d_nq <= d_nq + 1;
+    end if;
+end process;
+
+d_q_sum <= d_pq + d_nq;
+
+state: process(d_q_sum, clk_i)
+begin
+    if rising_edge(clk_i) then
+        if (d_q_sum = NDIV) then
+            o_state <=  true;
+        elsif (d_q_sum = 0) then
+            o_state <=  false;
+        end if;
     end if;
     
 end process;
 
 clk_o   <= '1'  when o_state else    '0';
-
-d_p     <= d_q + 1;
 
 d_ADD_ENABLE: if INCLUDE_ENABLE generate
     d_enable    <=  clk_en;
