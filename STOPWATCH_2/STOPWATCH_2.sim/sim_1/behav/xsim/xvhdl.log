@@ -1,14 +1,14 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'debounce'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/display.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/display.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'display'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/divider.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'divider'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/encoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/encoder.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'encoder'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/stopwatch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/stopwatch.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'stopwatch'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sources_1/new/top.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'top'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'tb_top'

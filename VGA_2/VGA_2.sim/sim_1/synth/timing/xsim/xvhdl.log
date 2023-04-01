@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_timing_clk'
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top'

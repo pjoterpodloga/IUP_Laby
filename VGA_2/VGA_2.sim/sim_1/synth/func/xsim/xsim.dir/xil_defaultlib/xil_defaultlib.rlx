@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim/tb_top_func_synth.vhd,1680374435,vhdl,,,,\vga_bitmap_blk_mem_gen_prim_width__parameterized0\;\vga_bitmap_blk_mem_gen_prim_width__parameterized1\;\vga_bitmap_blk_mem_gen_prim_width__parameterized2\;\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized0\;\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized1\;\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized2\;freq_divider;freq_divider_out;timing_clk;top;vga_bitmap;vga_bitmap_bindec;vga_bitmap_blk_mem_gen_generic_cstr;vga_bitmap_blk_mem_gen_mux;vga_bitmap_blk_mem_gen_prim_width;vga_bitmap_blk_mem_gen_prim_wrapper_init;vga_bitmap_blk_mem_gen_top;vga_bitmap_blk_mem_gen_v8_4_5;vga_bitmap_blk_mem_gen_v8_4_5_synth;vga_controller,,,,,,,,
+J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd,1680371987,vhdl,,,,tb_timing_clk,,,,,,,,
+J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_top.vhd,1680334034,vhdl,,,,tb_top,,,,,,,,

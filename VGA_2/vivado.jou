@@ -1,0 +1,338 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Apr  1 19:18:03 2023
+# Process ID: 51124
+# Current directory: J:/Kody/vhdl/IUP_Laby/VGA_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent51928 J:\Kody\vhdl\IUP_Laby\VGA_2\VGA_2.xpr
+# Log file: J:/Kody/vhdl/IUP_Laby/VGA_2/vivado.log
+# Journal file: J:/Kody/vhdl/IUP_Laby/VGA_2\vivado.jou
+# Running On: DESKTOP-G1E6JH8, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 12, Host memory: 17102 MB
+#-----------------------------------------------------------
+start_gui
+open_project J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.xpr
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_simulation
+source tb_top.tcl
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 139
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 139
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 139
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 138
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 139
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 149
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 152
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 144
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 139
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 142
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 146
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 141
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 172
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 171
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 174
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 180
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 177
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 171
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 141
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+close_sim
+launch_simulation
+source tb_top.tcl
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 142
+close_sim
+launch_simulation
+source tb_top.tcl
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 172
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+close_sim
+launch_simulation
+source tb_top.tcl
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 172
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 169
+close_sim
+launch_simulation
+source tb_top.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 169
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 142
+close_sim
+launch_simulation
+source tb_top.tcl
+launch_simulation -mode post-synthesis -type functional
+source tb_top.tcl
+current_sim simulation_6
+close_sim
+launch_simulation
+close_sim
+close_project
+open_project J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.xpr
+launch_simulation
+source tb_top.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_timing_clk [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+close_sim
+close_project
+open_project J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.xpr
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top timing_clk [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_simulation
+launch_simulation
+source tb_timing_clk.tcl
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 87
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} -line 87
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 87
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} -line 87
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 87
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 85
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 100
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+close_sim
+launch_simulation
+source tb_timing_clk.tcl
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+step
+step
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 127
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 127
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 145
+run 1 us
+run 1 us
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 145
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+close_sim
