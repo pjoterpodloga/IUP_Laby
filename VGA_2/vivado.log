@@ -1,0 +1,1302 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Apr  1 19:18:03 2023
+# Process ID: 51124
+# Current directory: J:/Kody/vhdl/IUP_Laby/VGA_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent51928 J:\Kody\vhdl\IUP_Laby\VGA_2\VGA_2.xpr
+# Log file: J:/Kody/vhdl/IUP_Laby/VGA_2/vivado.log
+# Journal file: J:/Kody/vhdl/IUP_Laby/VGA_2\vivado.jou
+# Running On: DESKTOP-G1E6JH8, OS: Windows, CPU Frequency: 3593 MHz, CPU Physical cores: 12, Host memory: 17102 MB
+#-----------------------------------------------------------
+start_gui
+open_project J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'vga_bitmap_synth_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:14 . Memory (MB): peak = 1159.652 ; gain = 283.828
+launch_runs synth_1 -jobs 10
+[Sat Apr  1 19:20:26 2023] Launched vga_bitmap_synth_1...
+Run output will be captured here: J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/vga_bitmap_synth_1/runme.log
+[Sat Apr  1 19:20:27 2023] Launched synth_1...
+Run output will be captured here: J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.bitmap.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Stopped at time : 0 fs : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 180
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1221.262 ; gain = 10.746
+run 1 us
+Stopped at time : 0 fs : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 138
+run 1 us
+Stopped at time : 0 fs : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 139
+run 1 us
+Stopped at time : 0 fs : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 138
+run 1 us
+Stopped at time : 0 fs : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 139
+run 1 us
+run 1 us
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 139
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 139
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 139
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 138
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 139
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 62
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 63
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 73
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 74
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/vga_controller.vhd" Line 230
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/vga_controller.vhd" Line 231
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/vga_controller.vhd" Line 233
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/vga_controller.vhd" Line 243
+step
+Stopped at time : 11005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_top.vhd" Line 73
+step
+Stopped at time : 11005 ns : File "/wrk/ci/prod/2022.2/sw/continuous/3508/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v" Line 3765
+WARNING: [Simulator 45-29] Cannot open source file /wrk/ci/prod/2022.2/sw/continuous/3508/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v: file does not exist.
+step
+Stopped at time : 11005 ns : File "/wrk/ci/prod/2022.2/sw/continuous/3508/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v" Line 3121
+step
+Stopped at time : 11005 ns : File "/wrk/ci/prod/2022.2/sw/continuous/3508/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v" Line 3123
+step
+Stopped at time : 11005 ns : File "/wrk/ci/prod/2022.2/sw/continuous/3508/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v" Line 3123
+step
+Stopped at time : 11005 ns : File "/wrk/ci/prod/2022.2/sw/continuous/3508/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v" Line 2567
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+step: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1234.594 ; gain = 0.000
+INFO: [Common 17-344] 'step' was cancelled
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 149
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 152
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 144
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 139
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 142
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 146
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 141
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 172
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 171
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 174
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 180
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 177
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 171
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 141
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1
+
+launch_runs synth_1 -jobs 10
+[Sat Apr  1 19:46:05 2023] Launched synth_1...
+Run output will be captured here: J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.bitmap.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.453 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1246.453 ; gain = 11.859
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1246.453 ; gain = 11.859
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 142
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.bitmap.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1249.094 ; gain = 2.641
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1249.094 ; gain = 2.641
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1249.094 ; gain = 2.641
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 172
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1
+
+launch_runs synth_1 -jobs 10
+[Sat Apr  1 19:49:19 2023] Launched synth_1...
+Run output will be captured here: J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'timing_clk'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.bitmap.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1268.594 ; gain = 10.891
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1268.594 ; gain = 10.891
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1268.594 ; gain = 10.891
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 172
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 169
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.bitmap.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Stopped at time : 0 fs : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 169
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1268.594 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1
+
+launch_runs synth_1 -jobs 10
+[Sat Apr  1 19:52:15 2023] Launched synth_1...
+Run output will be captured here: J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1/runme.log
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 169
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 142
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'timing_clk'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.bitmap.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1287.465 ; gain = 18.871
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1287.465 ; gain = 18.871
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1287.465 ; gain = 18.871
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'j:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.gen/sources_1/ip/vga_bitmap/vga_bitmap.dcp' for cell 'bitmap'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1678.473 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/constrs_1/new/constrains.xdc]
+Finished Parsing XDC File [J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/constrs_1/new/constrains.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1755.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1876.258 ; gain = 588.793
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim/tb_top_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim/tb_top_func_synth.vhd
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim/bitmap.coe'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim'
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim/tb_top_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'freq_divider'
+INFO: [VRFC 10-3107] analyzing entity 'freq_divider_out'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_bindec'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_blk_mem_gen_mux'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_blk_mem_gen_prim_wrapper_init'
+INFO: [VRFC 10-3107] analyzing entity '\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized0\'
+INFO: [VRFC 10-3107] analyzing entity '\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized1\'
+INFO: [VRFC 10-3107] analyzing entity '\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized2\'
+INFO: [VRFC 10-3107] analyzing entity 'timing_clk'
+INFO: [VRFC 10-3107] analyzing entity 'vga_controller'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_blk_mem_gen_prim_width'
+INFO: [VRFC 10-3107] analyzing entity '\vga_bitmap_blk_mem_gen_prim_width__parameterized0\'
+INFO: [VRFC 10-3107] analyzing entity '\vga_bitmap_blk_mem_gen_prim_width__parameterized1\'
+INFO: [VRFC 10-3107] analyzing entity '\vga_bitmap_blk_mem_gen_prim_width__parameterized2\'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_blk_mem_gen_generic_cstr'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_blk_mem_gen_top'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_blk_mem_gen_v8_4_5_synth'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap_blk_mem_gen_v8_4_5'
+INFO: [VRFC 10-3107] analyzing entity 'vga_bitmap'
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_timing_clk'
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_top_func_synth xil_defaultlib.tb_top -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_top_func_synth xil_defaultlib.tb_top -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_textio
+Compiling architecture obuf_v of entity unisim.OBUF [\OBUF(1,9)(1,7)(1,4)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111110000111")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000001000000")(0...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0010")(0,3)\]
+Compiling architecture gnd_v of entity unisim.GND [gnd_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00001000")(0,7)\]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_bindec [vga_bitmap_bindec_default]
+Compiling architecture muxf7_v of entity unisim.MUXF7 [muxf7_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10111000")(0,7)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010111100100000")(0...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_mux [vga_bitmap_blk_mem_gen_mux_defau...]
+Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="000...]
+Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="0000000000000...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0001")(0,3)\]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_prim_wrapper_init [vga_bitmap_blk_mem_gen_prim_wrap...]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_prim_width [vga_bitmap_blk_mem_gen_prim_widt...]
+Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="111...]
+Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="1111111111111...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0100")(0,3)\]
+Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized0\ [\vga_bitmap_blk_mem_gen_prim_wra...]
+Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_width__parameterized0\ [\vga_bitmap_blk_mem_gen_prim_wid...]
+Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="101...]
+Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="1010101010101...]
+Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized1\ [\vga_bitmap_blk_mem_gen_prim_wra...]
+Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_width__parameterized1\ [\vga_bitmap_blk_mem_gen_prim_wid...]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(init_00="1101110111011...]
+Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized2\ [\vga_bitmap_blk_mem_gen_prim_wra...]
+Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_width__parameterized2\ [\vga_bitmap_blk_mem_gen_prim_wid...]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_generic_cstr [vga_bitmap_blk_mem_gen_generic_c...]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_top [vga_bitmap_blk_mem_gen_top_defau...]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_v8_4_5_synth [vga_bitmap_blk_mem_gen_v8_4_5_sy...]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_v8_4_5 [vga_bitmap_blk_mem_gen_v8_4_5_de...]
+Compiling architecture structure of entity xil_defaultlib.vga_bitmap [vga_bitmap_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,4)(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000001110111...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="01000000")(0,7)\]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="0001")(0,3)\]
+Compiling architecture carry4_v of entity unisim.CARRY4 [carry4_default]
+Compiling architecture ldce_v of entity unisim.LDCE [ldce_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000001000000011")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000001011000000")(0...]
+Compiling architecture ldce_v of entity unisim.LDCE [\LDCE(init='1')\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1110010011110100")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000010111111110000...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="11110111")(0,7)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000001")(0,7)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00010001000100000001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00100010001000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10001000100010001000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00010001000101000000...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000010")(0,7)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000011001100000")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10000000000000001111...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0110")(0,3)\]
+Compiling architecture fdce_v of entity unisim.FDCE [\FDCE(is_c_inverted='1')\]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture structure of entity xil_defaultlib.freq_divider [freq_divider_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00011110")(0,7)\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000100001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000100000000100001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00101000001000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000100000100000001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000011000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10000000000000000000...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0111")(0,3)\]
+Compiling architecture structure of entity xil_defaultlib.timing_clk [timing_clk_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="01101010")(0,7)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0110101010101010")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="01111111111111111000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01101010101010101010...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="01101010101010101010...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10000000000000000000...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1001")(0,3)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111100111100000101...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000000001")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111111111111111...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111101111111")(0...]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(is_c_inverted='1')\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001110...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111111110")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111111101")(0...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10110100")(0,7)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10010110")(0,7)\]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1110")(0,3)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10111010")(0,7)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0100111100000100")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010001010110010")(0...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00001001")(0,7)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1001000000001001")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="01110000011111110111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000001000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000111111101111111...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0111100010000111")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000100011000")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001100010000000")(0...]
+Compiling architecture structure of entity xil_defaultlib.freq_divider_out [freq_divider_out_default]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0100010011010100")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture structure of entity xil_defaultlib.vga_controller [vga_controller_default]
+Compiling architecture structure of entity xil_defaultlib.top [top_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_top
+Built simulation snapshot tb_top_func_synth
+run_program: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2305.008 ; gain = 389.988
+INFO: [USF-XSim-69] 'elaborate' step finished in '16' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_func_synth -key {Post-Synthesis:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:45 . Memory (MB): peak = 2449.992 ; gain = 49.695
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:48 . Memory (MB): peak = 2449.992 ; gain = 144.984
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:44 ; elapsed = 00:01:17 . Memory (MB): peak = 2449.992 ; gain = 1162.527
+current_sim simulation_6
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: Proces nie mo¿e uzyskaæ dostêpu do pliku, poniewa¿ jest on u¿ywany przez inny proces: "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 19768 KB (Peak: 19768 KB), Simulation CPU Usage: 44327 ms
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+"xvhdl --incr --relax -prj tb_top_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.bitmap.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2451.574 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2451.574 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.574 ; gain = 0.000
+set_property top tb_timing_clk [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_timing_clk'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: Proces nie mo¿e uzyskaæ dostêpu do pliku, poniewa¿ jest on u¿ywany przez inny proces: "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_timing_clk'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_timing_clk' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_timing_clk_vlog.prj"
+"xvhdl --incr --relax -prj tb_timing_clk_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <hsync> does not exist in entity <timing_clk>.  Please compare the definition of block <timing_clk> to its component declaration and its instantion to detect the mismatch. [J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd:45]
+ERROR: [VRFC 10-718] formal port <vsync> does not exist in entity <timing_clk>.  Please compare the definition of block <timing_clk> to its component declaration and its instantion to detect the mismatch. [J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd:46]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2451.574 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top timing_clk [current_fileset]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat Apr  1 19:58:02 2023] Launched synth_1...
+Run output will be captured here: J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_timing_clk'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_timing_clk' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_timing_clk_vlog.prj"
+"xvhdl --incr --relax -prj tb_timing_clk_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <hsync> does not exist in entity <timing_clk>.  Please compare the definition of block <timing_clk> to its component declaration and its instantion to detect the mismatch. [J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd:45]
+ERROR: [VRFC 10-718] formal port <vsync> does not exist in entity <timing_clk>.  Please compare the definition of block <timing_clk> to its component declaration and its instantion to detect the mismatch. [J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd:46]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2451.574 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_timing_clk'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_timing_clk' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_timing_clk_vlog.prj"
+"xvhdl --incr --relax -prj tb_timing_clk_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sim_1/new/tb_timing_clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_timing_clk'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.freq_divider [\freq_divider(freq_out=25175000)...]
+Compiling architecture behavioral of entity xil_defaultlib.timing_clk [timing_clk_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_timing_clk
+Built simulation snapshot tb_timing_clk_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_timing_clk_behav -key {Behavioral:sim_1:Functional:tb_timing_clk} -tclbatch {tb_timing_clk.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_timing_clk.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2451.574 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_timing_clk_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 2451.574 ; gain = 0.000
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 87
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} -line 87
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 87
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} -line 87
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 87
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 85
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd} 100
+run 1 us
+Stopped at time : 20000015 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 100
+run 1 us
+Stopped at time : 20000015 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 85
+run 1 us
+Stopped at time : 20000015 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 85
+run 1 us
+Stopped at time : 20000030 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 87
+run 1 us
+Stopped at time : 20000045 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 100
+run 1 us
+Stopped at time : 20000045 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 85
+run 1 us
+Stopped at time : 20000045 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 85
+run 1 us
+Stopped at time : 20000060 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 87
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_timing_clk'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_timing_clk' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/vga_bitmap.mif'
+INFO: [SIM-utils-43] Exported 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim/bitmap.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_timing_clk_vlog.prj"
+"xvhdl --incr --relax -prj tb_timing_clk_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'timing_clk'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_timing_clk_behav -key {Behavioral:sim_1:Functional:tb_timing_clk} -tclbatch {tb_timing_clk.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_timing_clk.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 20ms
+Stopped at time : 0 fs : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 85
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_timing_clk_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20ms
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2451.574 ; gain = 0.000
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+step
+Stopped at time : 13005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 62
+step
+Stopped at time : 13005 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/freq_divider.vhd" Line 63
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1
+
+launch_runs synth_1 -jobs 10
+[Sat Apr  1 20:05:07 2023] Launched synth_1...
+Run output will be captured here: J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.runs/synth_1/runme.log
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 127
+run 1 us
+Stopped at time : 25010 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 127
+run 1 us
+Stopped at time : 25015 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 127
+run 1 us
+Stopped at time : 25015 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 127
+run 1 us
+Stopped at time : 25015 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 127
+run 1 us
+Stopped at time : 25020 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 127
+run 1 us
+Stopped at time : 25025 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 127
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 127
+add_bp {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} 145
+run 1 us
+Stopped at time : 25025 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 145
+run 1 us
+Stopped at time : 25035 ns : File "J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd" Line 145
+remove_bps -file {J:/Kody/vhdl/IUP_Laby/VGA_2/VGA_2.srcs/sources_1/new/timing_clk.vhd} -line 145
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  1 20:08:21 2023...

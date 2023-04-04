@@ -1,0 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.sim/sim_1/synth/func/xsim/tb_top_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'divider'
+INFO: [VRFC 10-3107] analyzing entity '\divider__parameterized1\'
+INFO: [VRFC 10-3107] analyzing entity '\divider__parameterized3\'
+INFO: [VRFC 10-3107] analyzing entity 'debounce'
+INFO: [VRFC 10-3107] analyzing entity 'display'
+INFO: [VRFC 10-3107] analyzing entity 'stopwatch'
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/STOPWATCH_2/STOPWATCH_2.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top'

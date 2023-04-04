@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../VGA_2.srcs/sources_1/new/timing_clk.vhd" \
+"../../../../VGA_2.srcs/sources_1/new/top.vhd" \
+"../../../../VGA_2.srcs/sources_1/new/vga_controller.vhd" \
+"../../../../VGA_2.srcs/sources_1/new/file_handler.vhd" \
+"../../../../VGA_2.srcs/sources_1/new/freq_divider.vhd" \
+"../../../../VGA_2.srcs/sources_1/new/freq_divider_out.vhd" \
+"../../../../VGA_2.srcs/sim_1/new/tb_timing_clk.vhd" \
+"../../../../VGA_2.srcs/sim_1/new/tb_top.vhd" \
+
+# Do not sort compile order
+nosort
