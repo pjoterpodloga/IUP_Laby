@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -53,9 +53,26 @@ component freq_div is
         clk_o   :   out std_logic);
 end component freq_div;
 
+component bus_controller is
+    Port (
+        baud_i  :   in  std_logic;
+        RXD_i   :   in  std_logic;
+        data_i  :   in  std_logic_vector(7 downto 0);
+        TXD_o   :   out std_logic;
+        clk_en  :   out std_logic;
+        data_o  :   out std_logic_vector(7 downto 0));
+        
+end component bus_controller;
+
 constant    FREQ_IN     :   natural :=  100E6;
 constant    BAUD_DELTA  :   real    :=  0.04;
 constant    BAUD_RATE   :   natural :=  natural(9600.0 * (1.0 + BAUD_DELTA));
+
+signal      baud_clock  :   std_logic;
+signal      clock_en    :   std_logic;
+
+signal      data_input  :   std_logic_vector(7 downto 0);
+signal      data_output :   std_logic_vector(7 downto 0);
 
 begin
 
@@ -65,8 +82,19 @@ async_clk: freq_div
         FREQ_OUT    =>  BAUD_RATE)
     port map (
         clk_i   =>  clk_i,
-        clk_en  =>  '0',
+        clk_en  =>  clock_en,
         rst_i   =>  rst_i,
-        clk_o   =>  open);
+        clk_o   =>  baud_clock);
+        
+ bus_controll: bus_controller
+    port map (
+        baud_i  =>  baud_clock,
+        RXD_i   =>  RXD_i,
+        data_i  =>  data_output,
+        TXD_o   =>  TXD_o,
+        clk_en  =>  clock_en,
+        data_o  =>  data_input);
+
+data_output <= std_logic_vector(unsigned(data_input) + x"20");
 
 end Behavioral;

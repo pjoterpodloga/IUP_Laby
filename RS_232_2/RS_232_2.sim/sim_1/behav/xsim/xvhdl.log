@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/IUP/Projekty/Laby/IUP_Laby/RS_232_2/RS_232_2.srcs/sources_1/new/freq_div.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'freq_div'
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/RS_232_2/RS_232_2.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top'
