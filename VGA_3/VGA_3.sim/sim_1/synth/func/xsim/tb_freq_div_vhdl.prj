@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"tb_freq_div_func_synth.vhd" \
+"../../../../../VGA_3.srcs/sim_1/new/tb_freq_div.vhd" \
+
+# Do not sort compile order
+nosort

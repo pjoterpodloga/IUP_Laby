@@ -55,6 +55,7 @@ end component freq_div;
 
 component bus_controller is
     Port (
+        clk_i   :   in  std_logic;
         baud_i  :   in  std_logic;
         RXD_i   :   in  std_logic;
         data_i  :   in  std_logic_vector(7 downto 0);
@@ -88,6 +89,7 @@ async_clk: freq_div
         
  bus_controll: bus_controller
     port map (
+        clk_i   =>  clk_i,
         baud_i  =>  baud_clock,
         RXD_i   =>  RXD_i,
         data_i  =>  data_output,

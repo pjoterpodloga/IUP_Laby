@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity bus_controller is
     Port (
+        clk_i   :   in  std_logic;
         baud_i  :   in  std_logic;
         RXD_i   :   in  std_logic;
         data_i  :   in  std_logic_vector(7 downto 0);
@@ -70,27 +71,28 @@ signal strobe       :   std_logic := '0';
 
 begin
 
-next_bus_state: process(rs232_current_state)
+next_bus_state: process(clk_i, rs232_current_state)
 begin
-    
-    case rs232_current_state is
-        when rs232_waiting  => rs232_next_state <= rs232_start;
-        when rs232_start    => rs232_next_state <= rs232_d0;
-        when rs232_d0       => rs232_next_state <= rs232_d1;
-        when rs232_d1       => rs232_next_state <= rs232_d2;
-        when rs232_d2       => rs232_next_state <= rs232_d3;
-        when rs232_d3       => rs232_next_state <= rs232_d4;
-        when rs232_d4       => rs232_next_state <= rs232_d5;
-        when rs232_d5       => rs232_next_state <= rs232_d6;
-        when rs232_d6       => rs232_next_state <= rs232_d7;
-        when rs232_d7       => rs232_next_state <= rs232_stop;
-        when rs232_stop     => rs232_next_state <= rs232_waiting;
-        when others         => rs232_next_state <= rs232_waiting;
-    end case;
+    if rising_edge(clk_i) then
+        case rs232_current_state is
+            when rs232_waiting  => rs232_next_state <= rs232_start;
+            when rs232_start    => rs232_next_state <= rs232_d0;
+            when rs232_d0       => rs232_next_state <= rs232_d1;
+            when rs232_d1       => rs232_next_state <= rs232_d2;
+            when rs232_d2       => rs232_next_state <= rs232_d3;
+            when rs232_d3       => rs232_next_state <= rs232_d4;
+            when rs232_d4       => rs232_next_state <= rs232_d5;
+            when rs232_d5       => rs232_next_state <= rs232_d6;
+            when rs232_d6       => rs232_next_state <= rs232_d7;
+            when rs232_d7       => rs232_next_state <= rs232_stop;
+            when rs232_stop     => rs232_next_state <= rs232_waiting;
+            when others         => rs232_next_state <= rs232_waiting;
+        end case;
+    end if;
     
 end process;
 
-transmit_recive_data: process(baud_i)
+transmit_recive_data: process(clk_i, baud_i)
 begin
     
     if rising_edge(baud_i) then
@@ -135,15 +137,17 @@ begin
     
 end process;
 
-transmission_detection: process(strobe, TXD, RXD, rs232_current_state, trans_dir_state)
+transmission_detection: process(clk_i, strobe, TXD, RXD, rs232_current_state, trans_dir_state)
 begin
-
-    if strobe = '1' and rs232_current_state = rs232_waiting then
-        trans_dir_state <= rs232_tx;
-    elsif RXD = '0' and rs232_current_state = rs232_waiting then
-        trans_dir_state <= rs232_rx;
-    elsif ((RXD = '1' and trans_dir_state = rs232_rx) or (TXD = '1' and trans_dir_state = rs232_tx)) and rs232_current_state = rs232_waiting then
-        trans_dir_state <= rs232_inactive;
+    
+    if rising_edge(clk_i) then
+        if strobe = '1' and rs232_current_state = rs232_waiting then
+            trans_dir_state <= rs232_tx;
+        elsif RXD = '0' and rs232_current_state = rs232_waiting then
+            trans_dir_state <= rs232_rx;
+        elsif ((RXD = '1' and trans_dir_state = rs232_rx) or (TXD = '1' and trans_dir_state = rs232_tx)) and rs232_current_state = rs232_waiting then
+            trans_dir_state <= rs232_inactive;
+        end if;
     end if;
 
 end process;

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_3/VGA_3.sim/sim_1/synth/func/xsim/tb_freq_div_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'freq_div'
+INFO: [VRFC 10-163] Analyzing VHDL file "J:/Kody/vhdl/IUP_Laby/VGA_3/VGA_3.srcs/sim_1/new/tb_freq_div.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_freq_div'
