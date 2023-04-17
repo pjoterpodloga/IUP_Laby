@@ -34,9 +34,10 @@ use IEEE.NUMERIC_STD.ALL;
 entity top is
     Port ( 
         clk_i   :   in  std_logic;
-        rst_i  :   in  std_logic;
+        rst_i   :   in  std_logic;
         RXD_i   :   in  std_logic;
-        TXD_o   :   out std_logic);
+        TXD_o   :   out std_logic;
+        baud_o  :   out std_logic);
 end top;
 
 architecture Behavioral of top is
@@ -50,13 +51,15 @@ component freq_div is
         clk_i   :   in  std_logic;
         clk_en  :   in  std_logic;
         rst_i   :   in  std_logic;
-        clk_o   :   out std_logic);
+        clk_o   :   out std_logic;
+        nclk_o  :   out std_logic);
 end component freq_div;
 
 component bus_controller is
     Port (
         clk_i   :   in  std_logic;
         baud_i  :   in  std_logic;
+        nbaud_i :   in  std_logic;
         RXD_i   :   in  std_logic;
         data_i  :   in  std_logic_vector(7 downto 0);
         TXD_o   :   out std_logic;
@@ -66,10 +69,11 @@ component bus_controller is
 end component bus_controller;
 
 constant    FREQ_IN     :   natural :=  100E6;
-constant    BAUD_DELTA  :   real    :=  0.04;
+constant    BAUD_DELTA  :   real    :=  0.00;
 constant    BAUD_RATE   :   natural :=  natural(9600.0 * (1.0 + BAUD_DELTA));
 
 signal      baud_clock  :   std_logic;
+signal      nbaud_clock:   std_logic;
 signal      clock_en    :   std_logic;
 
 signal      data_input  :   std_logic_vector(7 downto 0);
@@ -85,12 +89,14 @@ async_clk: freq_div
         clk_i   =>  clk_i,
         clk_en  =>  clock_en,
         rst_i   =>  rst_i,
-        clk_o   =>  baud_clock);
+        clk_o   =>  baud_clock,
+        nclk_o  =>  nbaud_clock);
         
  bus_controll: bus_controller
     port map (
         clk_i   =>  clk_i,
         baud_i  =>  baud_clock,
+        nbaud_i =>  nbaud_clock,
         RXD_i   =>  RXD_i,
         data_i  =>  data_output,
         TXD_o   =>  TXD_o,
@@ -98,5 +104,7 @@ async_clk: freq_div
         data_o  =>  data_input);
 
 data_output <= std_logic_vector(unsigned(data_input) + x"20");
+
+baud_o  <=  baud_clock;
 
 end Behavioral;

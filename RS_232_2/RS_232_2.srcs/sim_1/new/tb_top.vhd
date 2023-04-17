@@ -40,9 +40,10 @@ architecture Behavioral of tb_top is
 component top is
     Port ( 
         clk_i   :   in  std_logic;
-        rst_i  :   in  std_logic;
+        rst_i   :   in  std_logic;
         RXD_i   :   in  std_logic;
-        TXD_o   :   out std_logic);
+        TXD_o   :   out std_logic;
+        baud_o  :   out std_logic);
 end component top;
 
 constant    FREQ_IN     :   natural :=  100E6;
@@ -56,6 +57,8 @@ signal  rst_i   :   std_logic   :=  '0';
 signal  RXD_i   :   std_logic   :=  '1';
 signal  TXD_o   :   std_logic   :=  '1';
 
+signal  baud_o  :   std_logic   :=  '0';
+
 begin
 
 dut: top
@@ -63,7 +66,8 @@ dut: top
         clk_i   =>  clk_i,
         rst_i   =>  rst_i,
         RXD_i   =>  RXD_i,
-        TXD_o   =>  TXD_o);
+        TXD_o   =>  TXD_o,
+        baud_o  =>  baud_o);
 
 clk_i   <=  not clk_i after PERIOD/2;
 
@@ -76,9 +80,82 @@ begin
     RXD_i <= '1';
     wait for BAUD_PERIOD;  
     RXD_i <= '0';
-    wait for 2*BAUD_PERIOD;  
+    wait for BAUD_PERIOD;  
     RXD_i <= '0';
-    wait for 4*BAUD_PERIOD;
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '1';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '1';
+    
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '1';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '1';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '1';
+    
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '1';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '1';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '1';
+    
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '1';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;  
+    RXD_i <= '0';
+    wait for BAUD_PERIOD;
+    RXD_i <= '1';
+    wait for BAUD_PERIOD;  
     RXD_i <= '1';
     
     wait;

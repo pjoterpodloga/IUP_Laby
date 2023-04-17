@@ -40,7 +40,8 @@ entity freq_div is
         clk_i   :   in  std_logic;
         clk_en  :   in  std_logic;
         rst_i   :   in  std_logic;
-        clk_o   :   out std_logic);
+        clk_o   :   out std_logic;
+        nclk_o  :   out std_logic);
 end freq_div;
 
 architecture Behavioral of freq_div is
@@ -51,6 +52,7 @@ signal d_q      :   natural range NDIV downto 0 := 0;
 signal d_reset  :   boolean := false;
 
 signal d_state  :   std_logic   := '0';
+signal d_state_s:   std_logic   := '0';
 
 begin
 
@@ -74,6 +76,13 @@ begin
         elsif d_q = NDIV/2 then
             d_state <= '1';
         end if;
+        
+        if d_q = NDIV/4 then
+            d_state_s <= '1';
+        elsif d_q = 3*NDIV/4 then
+            d_state_s <= '0';
+        end if;
+        
     end if;
 
 end process;
@@ -89,6 +98,7 @@ begin
 
 end process;
 
-clk_o <= d_state;
+clk_o   <=  d_state;
+nclk_o  <=  not d_state;
 
 end Behavioral;

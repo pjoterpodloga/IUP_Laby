@@ -11,7 +11,7 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.freq_div [\freq_div(freq_out=9984)\]
+Compiling architecture behavioral of entity xil_defaultlib.freq_div [\freq_div(freq_out=9600)\]
 Compiling architecture behavioral of entity xil_defaultlib.bus_controller [bus_controller_default]
 Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
 Compiling architecture behavioral of entity xil_defaultlib.tb_top

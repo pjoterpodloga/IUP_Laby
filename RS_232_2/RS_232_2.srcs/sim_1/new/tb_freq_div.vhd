@@ -46,11 +46,12 @@ component freq_div is
         clk_i   :   in  std_logic;
         clk_en  :   in  std_logic;
         rst_i   :   in  std_logic;
-        clk_o   :   out std_logic);
+        clk_o   :   out std_logic;
+        clk_s_o :   out std_logic);
 end component freq_div;
 
 constant    FREQ_IN     :   natural :=  100E6;
-constant    FREQ_OUT    :   natural :=  10E6;
+constant    FREQ_OUT    :   natural :=  9600;
 
 constant    PERIOD_IN   :   time    :=  (1.0E12 / real(FREQ_IN)) * 1ps;
 constant    HPERIOD_IN  :   time    :=  PERIOD_IN / 2;
@@ -59,6 +60,9 @@ signal  clk_i   :   std_logic   :=  '0';
 signal  clk_en  :   std_logic   :=  '0';
 signal  rst_i   :   std_logic   :=  '0';
 signal  clk_o   :   std_logic   :=  '0';
+signal  clk_s_o :   std_logic   :=  '0';
+
+signal sig      :   std_logic   :=  '0';
 
 begin
 
@@ -71,13 +75,19 @@ dut: freq_div
         clk_i   =>  clk_i,
         clk_en  =>  clk_en,
         rst_i   =>  rst_i,
-        clk_o   =>  clk_o);
+        clk_o   =>  clk_o,
+        clk_s_o =>  clk_s_o);
 
 clk_i   <=  not clk_i after HPERIOD_IN;
+
+sig <=  not sig after 104us;
 
 stim: process
 begin
 
+    clk_en <= '1';
+
+    wait;
     wait for 100ns;
     clk_en <= '1';
     wait for 100ns;
