@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Piotr Buluk, Jakub Cichocki
 -- 
 -- Create Date: 05.04.2023 16:16:48
 -- Design Name: 

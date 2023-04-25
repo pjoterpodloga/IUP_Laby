@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Piotr Buluk, Jakub Cichocki
 -- 
 -- Create Date: 05.04.2023 16:15:58
 -- Design Name: 
@@ -36,8 +36,7 @@ entity top is
         clk_i   :   in  std_logic;
         rst_i   :   in  std_logic;
         RXD_i   :   in  std_logic;
-        TXD_o   :   out std_logic;
-        baud_o  :   out std_logic);
+        TXD_o   :   out std_logic);
 end top;
 
 architecture Behavioral of top is
@@ -104,7 +103,5 @@ async_clk: freq_div
         data_o  =>  data_input);
 
 data_output <= std_logic_vector(unsigned(data_input) + x"20");
-
-baud_o  <=  baud_clock;
 
 end Behavioral;

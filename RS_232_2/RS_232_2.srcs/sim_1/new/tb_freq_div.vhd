@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Piotr Buluk, Jakub Cichocki
 -- 
 -- Create Date: 05.04.2023 16:26:41
 -- Design Name: 
@@ -47,7 +47,7 @@ component freq_div is
         clk_en  :   in  std_logic;
         rst_i   :   in  std_logic;
         clk_o   :   out std_logic;
-        clk_s_o :   out std_logic);
+        nclk_o  :   out std_logic);
 end component freq_div;
 
 constant    FREQ_IN     :   natural :=  100E6;
@@ -60,7 +60,7 @@ signal  clk_i   :   std_logic   :=  '0';
 signal  clk_en  :   std_logic   :=  '0';
 signal  rst_i   :   std_logic   :=  '0';
 signal  clk_o   :   std_logic   :=  '0';
-signal  clk_s_o :   std_logic   :=  '0';
+signal  nclk_o  :   std_logic   :=  '0';
 
 signal sig      :   std_logic   :=  '0';
 
@@ -76,7 +76,7 @@ dut: freq_div
         clk_en  =>  clk_en,
         rst_i   =>  rst_i,
         clk_o   =>  clk_o,
-        clk_s_o =>  clk_s_o);
+        nclk_o  =>  nclk_o);
 
 clk_i   <=  not clk_i after HPERIOD_IN;
 

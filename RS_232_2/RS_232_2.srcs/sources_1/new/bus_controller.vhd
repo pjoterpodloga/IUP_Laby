@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Piotr Buluk, Jakub Cichocki
 -- 
 -- Create Date: 05.04.2023 16:49:46
 -- Design Name: 
@@ -141,7 +141,7 @@ begin
     
 end process;
 
-transmit_data: process(nbaud_i)
+transmit_data: process(clk_i, nbaud_i)
 begin
 
     if rising_edge(nbaud_i) then

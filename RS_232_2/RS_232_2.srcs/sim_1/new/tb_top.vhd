@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Piotr Buluk, Jakub Cichocki 
 -- 
 -- Create Date: 05.04.2023 22:31:24
 -- Design Name: 
@@ -42,8 +42,7 @@ component top is
         clk_i   :   in  std_logic;
         rst_i   :   in  std_logic;
         RXD_i   :   in  std_logic;
-        TXD_o   :   out std_logic;
-        baud_o  :   out std_logic);
+        TXD_o   :   out std_logic);
 end component top;
 
 constant    FREQ_IN     :   natural :=  100E6;
@@ -57,8 +56,6 @@ signal  rst_i   :   std_logic   :=  '0';
 signal  RXD_i   :   std_logic   :=  '1';
 signal  TXD_o   :   std_logic   :=  '1';
 
-signal  baud_o  :   std_logic   :=  '0';
-
 begin
 
 dut: top
@@ -66,8 +63,7 @@ dut: top
         clk_i   =>  clk_i,
         rst_i   =>  rst_i,
         RXD_i   =>  RXD_i,
-        TXD_o   =>  TXD_o,
-        baud_o  =>  baud_o);
+        TXD_o   =>  TXD_o);
 
 clk_i   <=  not clk_i after PERIOD/2;
 
