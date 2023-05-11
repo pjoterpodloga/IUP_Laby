@@ -1,8 +1,9 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-4940] 'vga_bitmap' remains a black box since it has no binding entity [P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/vga_image_module.vhd:99]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -10,6 +11,12 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.synchronizer_module [\synchronizer_module(2,0)(2,0)\]
+Compiling architecture behavioral of entity xil_defaultlib.synchronizer_module [\synchronizer_module(3,0)(3,0)\]
+Compiling architecture behavioral of entity xil_defaultlib.clk_div [\clk_div(clk_out=25000000)\]
 Compiling architecture behavioral of entity xil_defaultlib.timing_module [timing_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_timing_clk
-Built simulation snapshot tb_timing_clk_behav
+Compiling architecture behavioral of entity xil_defaultlib.vga_image_module [vga_image_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_top
+Built simulation snapshot tb_top_behav

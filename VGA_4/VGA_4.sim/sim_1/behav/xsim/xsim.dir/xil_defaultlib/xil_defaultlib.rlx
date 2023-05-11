@@ -2,8 +2,13 @@
 2020.2
 Oct 14 2022
 05:20:55
-P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sim_1/new/tb_clk_div.vhd,1683733696,vhdl,,,,tb_clk_div,,,,,,,,
-P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sim_1/new/tb_timing_clk.vhd,1683795881,vhdl,,,,tb_timing_clk,,,,,,,,
-P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/clk_div.vhd,1683733907,vhdl,,,,clk_div,,,,,,,,
-P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/timing_module.vhd,1683796946,vhdl,,,,timing_module,,,,,,,,
-P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/top.vhd,1683732193,vhdl,,,,top,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.vhdl,1683838555,vhdl,,,,\blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0\;\blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1\;\blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2\;\blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized0\;\blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized1\;\blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized2\;blk_mem_gen_0;blk_mem_gen_0_bindec;blk_mem_gen_0_blk_mem_gen_generic_cstr;blk_mem_gen_0_blk_mem_gen_mux;blk_mem_gen_0_blk_mem_gen_prim_width;blk_mem_gen_0_blk_mem_gen_prim_wrapper_init;blk_mem_gen_0_blk_mem_gen_top;blk_mem_gen_0_blk_mem_gen_v8_4_5;blk_mem_gen_0_blk_mem_gen_v8_4_5_synth,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sim_1/new/tb_clk_div.vhd,1683797100,vhdl,,,,tb_clk_div,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sim_1/new/tb_synchronizer.vhd,1683825588,vhdl,,,,tb_synchronizer,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sim_1/new/tb_timing_clk.vhd,1683797094,vhdl,,,,tb_timing_clk,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sim_1/new/tb_top.vhd,1683826966,vhdl,,,,tb_top,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/clk_div.vhd,1683822534,vhdl,,,,clk_div,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/synchronizer_module.vhd,1683825381,vhdl,,,,synchronizer_module,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/timing_module.vhd,1683837689,vhdl,,,,timing_module,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/top.vhd,1683835517,vhdl,,,,top,,,,,,,,
+P:/IUP/Projekty/Laby/IUP_Laby/VGA_4/VGA_4.srcs/sources_1/new/vga_image_module.vhd,1683838473,vhdl,,,,vga_image_module,,,,,,,,

@@ -61,10 +61,10 @@ constant    H_S_PULSE_T :   time    :=   3.77us;    -- Horizontal sync pulse tim
 constant    H_B_PORCH_T :   time    :=   1.89us;    -- Horizontal back porch
 
 -- Dividers for clock
-constant    H_A_VIDEO_D :   natural :=  (H_A_VIDEO_T / PIXEL_PERIOD);
-constant    H_F_PORCH_D :   natural :=  (H_F_PORCH_T / PIXEL_PERIOD);
-constant    H_S_PULSE_D :   natural :=  (H_S_PULSE_T / PIXEL_PERIOD);
-constant    H_B_PORCH_D :   natural :=  (H_B_PORCH_T / PIXEL_PERIOD);
+constant    H_A_VIDEO_D :   natural :=  629;--(H_A_VIDEO_T / PIXEL_PERIOD);
+constant    H_F_PORCH_D :   natural :=   23;--(H_F_PORCH_T / PIXEL_PERIOD);
+constant    H_S_PULSE_D :   natural :=   94;--(H_S_PULSE_T / PIXEL_PERIOD);
+constant    H_B_PORCH_D :   natural :=   47;--(H_B_PORCH_T / PIXEL_PERIOD);
 
 -- Maximum possible h_count value to limit range
 constant    H_MAX_DIV   :   natural :=  H_A_VIDEO_D;
@@ -79,10 +79,10 @@ constant    V_S_PULSE_T :   time    :=   0.06ms;    -- Vertical sync pulse time
 constant    V_B_PORCH_T :   time    :=   1.00ms;    -- Vertical back porch time
 
 -- Divider for clock
-constant    V_A_VIDEO_D :   natural :=  (V_A_VIDEO_T / SCANLINE_T);
-constant    V_F_PORCH_D :   natural :=  (V_F_PORCH_T / SCANLINE_T);
-constant    V_S_PULSE_D :   natural :=  (V_S_PULSE_T / SCANLINE_T);
-constant    V_B_PORCH_D :   natural :=  (V_B_PORCH_T / SCANLINE_T);
+constant    V_A_VIDEO_D :   natural :=  479;--(V_A_VIDEO_T / SCANLINE_T);
+constant    V_F_PORCH_D :   natural :=   11;--(V_F_PORCH_T / SCANLINE_T);
+constant    V_S_PULSE_D :   natural :=    1;--(V_S_PULSE_T / SCANLINE_T);
+constant    V_B_PORCH_D :   natural :=   31;--(V_B_PORCH_T / SCANLINE_T);
 
 -- Maximum possible v_count value to limit range
 constant    V_MAX_DIV   :   natural :=  V_A_VIDEO_D;
@@ -111,13 +111,13 @@ signal  v_count :   natural range V_MAX_DIV downto 0    :=  0;
 signal  v_div   :   natural range V_MAX_DIV downto 0    :=  0;
 signal  v_last  :   h_state_enum;
 
-signal  internal_hsync  :   std_logic;
-signal  internal_vsync  :   std_logic;
-signal  internal_video  :   std_logic;
+signal  internal_hsync  :   std_logic   :=  '1';
+signal  internal_vsync  :   std_logic   :=  '1';
+signal  internal_video  :   std_logic   :=  '1';
 
 begin
 
-state_prep: process(clk_i)
+HV_state_machines: process(clk_i)
 begin
 
     if rising_edge(clk_i) then

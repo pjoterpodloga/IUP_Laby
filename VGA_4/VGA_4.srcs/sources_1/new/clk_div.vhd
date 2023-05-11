@@ -52,7 +52,7 @@ signal q_state  :   std_logic   := '0';
 
 begin
 
-counting: process(clk_i)
+counting: process(clk_i, rst_i)
 begin
 
     if (rst_i = '1') then
