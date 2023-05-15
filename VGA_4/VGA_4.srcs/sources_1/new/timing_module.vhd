@@ -39,7 +39,8 @@ entity timing_module is
         clk_i       :   in  std_logic;
         rst_i       :   in  std_logic;
         pixel_clk_i :   in  std_logic;
-        video_a_o   :   out std_logic;
+        h_video_a_o :   out std_logic;
+        v_video_a_o :   out std_logic;
         hsync_o     :   out std_logic;
         vsync_o     :   out std_logic);
 end timing_module;
@@ -113,7 +114,8 @@ signal  v_last  :   h_state_enum;
 
 signal  internal_hsync  :   std_logic   :=  '1';
 signal  internal_vsync  :   std_logic   :=  '1';
-signal  internal_video  :   std_logic   :=  '1';
+signal  internal_h_video  :   std_logic :=  '1';
+signal  internal_v_video  :   std_logic :=  '1';
 
 begin
 
@@ -188,10 +190,10 @@ begin
                 internal_hsync <= '1';
             end if;
             
-            if h_current_state = h_video and v_current_state = v_video then
-                internal_video <= '1';
+            if h_current_state = H_VIDEO and v_current_state = V_VIDEO then
+                internal_h_video <= '1';
             else
-                internal_video <= '0';
+                internal_h_video <= '0';
             end if;
             
         end if;
@@ -223,6 +225,12 @@ begin
                 internal_vsync <= '1';
             end if;
             
+            if v_current_state = V_VIDEO then
+                internal_v_video <= '1';
+            else
+                internal_v_video <= '0';
+            end if;
+            
         end if;
     end if;
 
@@ -231,6 +239,7 @@ end process;
 hsync_o <=  internal_hsync;
 vsync_o <=  internal_vsync;
 
-video_a_o <= internal_video;
+h_video_a_o <= internal_h_video;
+v_video_a_o <= internal_v_video;
 
 end Behavioral;

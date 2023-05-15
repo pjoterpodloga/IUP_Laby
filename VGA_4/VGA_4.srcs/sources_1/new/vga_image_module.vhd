@@ -34,14 +34,15 @@ use IEEE.NUMERIC_STD.ALL;
 entity vga_image_module is
 
     Port (
-        clk_i   :   in std_logic;
-        clk_p   :   in std_logic;
-        vsync_i :   in std_logic;
-        sw_i    :   in std_logic_vector(2 downto 0);
-        btn_i   :   in std_logic_vector(3 downto 0);
-        red_o   :   out std_logic;
-        green_o :   out std_logic;
-        blue_o  :   out std_logic);
+        clk_i       :   in std_logic;
+        clk_p       :   in std_logic;
+        vsync_i     :   in std_logic;
+        vid_act_i   :   in std_logic;
+        sw_i        :   in std_logic_vector(2 downto 0);
+        btn_i       :   in std_logic_vector(3 downto 0);
+        red_o       :   out std_logic;
+        green_o     :   out std_logic;
+        blue_o      :   out std_logic);
         
 end vga_image_module;
 
@@ -113,16 +114,19 @@ signal  display_y   :   natural range DISPLAY_HEIGHT downto 0   :=  0;
 
 signal  last_disp_x :   std_logic   :=  '0';
 
-signal  image_x     :   natural range MAX_IMAGE_W    downto 0   :=  (DISPLAY_WIDTH  - IMAGE_WIDTH ) / 2;
-signal  image_y     :   natural range MAX_IMAGE_H    downto 0   :=  (DISPLAY_HEIGHT - IMAGE_HEIGHT) / 2;
+signal  image_x     :   natural range IMAGE_WIDTH    downto 0   := 0;
+signal  image_y     :   natural range IMAGE_HEIGHT   downto 0   := 0;
+
+signal  image_pos_x :   natural range MAX_IMAGE_W    downto 0   :=  (DISPLAY_WIDTH  - IMAGE_WIDTH ) / 2;
+signal  image_pos_y :   natural range MAX_IMAGE_H    downto 0   :=  (DISPLAY_HEIGHT - IMAGE_HEIGHT) / 2;
 
 signal  last_img_x  :   std_logic   :=  '0';
 signal  last_vsync  :   std_logic   :=  '1';
 
 signal  display_state   :   display_state_enum  :=  DISPLAY_BG;
 
-signal  q_pixel     :   natural range PIXEL_PER_BYTE            downto 0   :=  0;
-signal  pixel_it    :   natural range PIXEL_PER_BYTE*IMAGE_SIZE downto 0   :=  0;
+signal  q_pixel     :   natural range PIXEL_PER_BYTE    downto 0   :=  0;
+signal  pixel_it    :   natural range IMAGE_SIZE        downto 0   :=  0;
 signal  address     :   std_logic_vector(13 downto 0);
 
 signal  data        :   std_logic_vector(7 downto 0)    :=  (others => '0');
@@ -150,14 +154,19 @@ begin
             
             display_x <= display_x + 1;
         end if;
-        
+    
         if display_x = DISPLAY_WIDTH then
             display_x <= 0;
             display_y <= display_y + 1;
         end if;
-        
+            
         if display_y = DISPLAY_HEIGHT then
             display_y <= 0;
+        end if;
+        
+        if vid_act_i <= '0' then
+            display_x   <=  0;
+            display_y   <=  0;
         end if;
     
     end if;
@@ -166,6 +175,7 @@ end process;
 
 image_counting: process(clk_i)
 begin
+
 
     if rising_edge(clk_i) then
     
@@ -181,23 +191,30 @@ begin
                 
                 q_pixel  <= q_pixel + 1;
             end if;
-            
-            if q_pixel = PIXEL_PER_BYTE then
-                q_pixel <= 0;
-                pixel_it <= pixel_it + PIXEL_PER_BYTE;
-            end if;
-            
-            if image_x = IMAGE_WIDTH then
-                image_x <= 0;
-                image_y <= image_y + 1;
-            end if;
-            
-            if image_y = IMAGE_HEIGHT then
-                image_y <= 0;
-            end if;
         
         end if;
     
+        if q_pixel = PIXEL_PER_BYTE then
+            q_pixel <= 0;
+            pixel_it <= pixel_it + 1;
+        end if;
+        
+        if image_x = IMAGE_WIDTH then
+            image_x <= 0;
+            image_y <= image_y + 1;
+        end if;
+                
+        if image_y = IMAGE_HEIGHT then
+            image_y <= 0;
+        end if;
+    
+    end if;
+     
+    if vid_act_i <= '0' then
+        image_x     <= 0;
+        image_y     <= 0;
+        pixel_it    <= 0;
+        q_pixel     <= 0;
     end if;
 
 end process;
@@ -232,14 +249,14 @@ begin
         elsif vsync_i /= last_vsync then
             last_vsync <= '0';
             
-            if (btn_i(0) = '0' and image_x /= 0) then
-                image_x <= image_x - 1;                             -- left
-            elsif (btn_i(1) = '0' and image_y /= 0) then
-                image_y <= image_y - 1;                             -- down
-            elsif (btn_i(2) = '0' and image_y /= MAX_IMAGE_H) then    
-                image_y <= image_y + 1;                             -- up
-            elsif (btn_i(3) = '0' and image_x /= MAX_IMAGE_W) then
-                image_x <= image_x + 1;                             -- right
+            if (btn_i(0) = '0' and image_pos_x /= 0) then
+                image_pos_x <= image_pos_x - 1;                             -- left
+            elsif (btn_i(1) = '0' and image_pos_y /= 0) then
+                image_pos_y <= image_pos_y - 1;                             -- down
+            elsif (btn_i(2) = '0' and image_pos_y /= MAX_IMAGE_H) then    
+                image_pos_y <= image_pos_y + 1;                             -- up
+            elsif (btn_i(3) = '0' and image_pos_x /= MAX_IMAGE_W) then
+                image_pos_x <= image_pos_x + 1;                             -- right
             end if;
             
         end if;
@@ -248,10 +265,24 @@ begin
 
 end process;
 
-img_color   <=  data2color(data(7 downto 4)) when q_pixel = 0 else data2color(data(3 downto 0));
-bg_color    <=  sw_i;
+set_img_pixel: process(clk_i)
+begin
 
-address <= std_logic_vector(to_unsigned(pixel_it/PIXEL_PER_BYTE, address'length));
+    if rising_edge(clk_i) then
+    
+        bg_color    <=  sw_i;
+    
+        if q_pixel = 0 then
+            img_color <= data2color(data(7 downto 4));
+        elsif q_pixel = 1 then
+            img_color <= data2color(data(3 downto 0));
+        end if;
+        
+    end if;
+
+end process;
+
+address <= std_logic_vector(to_unsigned(pixel_it, address'length));
 
 red_o   <=  img_color(2) when display_state = DISPLAY_IMG else bg_color(2);
 green_o <=  img_color(1) when display_state = DISPLAY_IMG else bg_color(1);

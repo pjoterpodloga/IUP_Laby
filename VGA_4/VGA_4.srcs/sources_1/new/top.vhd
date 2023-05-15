@@ -78,7 +78,8 @@ component timing_module is
         clk_i       :   in  std_logic;
         rst_i       :   in  std_logic;
         pixel_clk_i :   in  std_logic;
-        video_a_o   :   out std_logic;
+        h_video_a_o :   out std_logic;
+        v_video_a_o :   out std_logic;
         hsync_o     :   out std_logic;
         vsync_o     :   out std_logic);
         
@@ -87,14 +88,15 @@ end component timing_module;
 component vga_image_module is
 
     Port (
-        clk_i   :   in std_logic;
-        clk_p   :   in std_logic;
-        vsync_i :   in std_logic;
-        sw_i    :   in std_logic_vector(2 downto 0);
-        btn_i   :   in std_logic_vector(3 downto 0);
-        red_o   :   out std_logic;
-        green_o :   out std_logic;
-        blue_o  :   out std_logic);
+        clk_i       :   in std_logic;
+        clk_p       :   in std_logic;
+        vsync_i     :   in std_logic;
+        vid_act_i   :   in std_logic;
+        sw_i        :   in std_logic_vector(2 downto 0);
+        btn_i       :   in std_logic_vector(3 downto 0);
+        red_o       :   out std_logic;
+        green_o     :   out std_logic;
+        blue_o      :   out std_logic);
         
 end component vga_image_module;
 
@@ -115,7 +117,8 @@ signal clk_p    :   std_logic;
 signal q_pixel  :   natural range 4 downto 0;
 
 -- timing module
-signal video_active :   std_logic;
+signal h_video_active :   std_logic;
+signal v_video_active :   std_logic;
 
 signal red   :  std_logic;
 signal green :  std_logic;
@@ -141,30 +144,32 @@ pixel_clock: clk_div
 
 timing_m:   timing_module 
     GENERIC MAP(
-        CLK_IN  =>  CLK_IN)
+        CLK_IN      =>  CLK_IN)
         
     PORT MAP(
-        clk_i   =>  clk_i,
-        rst_i   =>  '0',
+        clk_i       =>  clk_i,
+        rst_i       =>  '0',
         pixel_clk_i =>  clk_p,
-        video_a_o   =>  video_active,
-        hsync_o =>  hsync,
-        vsync_o =>  vsync);
+        h_video_a_o =>  h_video_active,
+        v_video_a_o =>  v_video_active,
+        hsync_o     =>  hsync,
+        vsync_o     =>  vsync);
 
 vga_module:     vga_image_module
     PORT MAP (
-        clk_i   =>  clk_i,
-        clk_p   =>  clk_p,
-        vsync_i =>  vsync,
-        sw_i    =>  sw_i,
-        btn_i   =>  btn_i,
-        red_o   =>  red,
-        green_o =>  green,
-        blue_o  =>  blue);
+        clk_i       =>  clk_i,
+        clk_p       =>  clk_p,
+        vsync_i     =>  vsync,
+        vid_act_i   =>  v_video_active,
+        sw_i        =>  sw_i,
+        btn_i       =>  btn_i,
+        red_o       =>  red,
+        green_o     =>  green,
+        blue_o      =>  blue);
 
-red_o   <=  (others => red);
-green_o <=  (others => green);
-blue_o  <=  (others => blue);    
+red_o   <=  (others => red)     when h_video_active = '1' else (others => '0');
+green_o <=  (others => green)   when h_video_active = '1' else (others => '0');
+blue_o  <=  (others => blue)    when h_video_active = '1' else (others => '0');    
 
 hsync_o <=  hsync;
 vsync_o <=  vsync;
