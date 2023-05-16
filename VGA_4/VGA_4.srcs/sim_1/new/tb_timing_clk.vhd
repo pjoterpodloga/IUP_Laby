@@ -44,8 +44,9 @@ component timing_module is
     Port ( 
         clk_i       :   in  std_logic;
         rst_i       :   in  std_logic;
-        pixel_clk_i :   in  std_logic;
-        video_a_o   :   out std_logic;
+        pixel_clk_i :   in  std_logic;        
+        h_video_a_o :   out std_logic;
+        v_video_a_o :   out std_logic;
         hsync_o     :   out std_logic;
         vsync_o     :   out std_logic);
 end component timing_module;
@@ -58,7 +59,8 @@ constant    PIXEL_PERIOD:   time        :=  (1.0E12/25.0E6) * 1ps;
 signal clk_i        :   std_logic   :=  '0';
 signal rst_i        :   std_logic   :=  '0';
 signal pixel_clk_i  :   std_logic   :=  '0';
-signal video_a_o    :   std_logic   :=  '0';
+signal h_video_a_o  :   std_logic   :=  '0';
+signal v_video_a_o  :   std_logic   :=  '0';
 signal hsync_o      :   std_logic   :=  '1';
 signal vsync_o      :   std_logic   :=  '1';
 
@@ -72,7 +74,8 @@ dut: timing_module
         clk_i   =>  clk_i,
         rst_i   =>  rst_i,
         pixel_clk_i =>  pixel_clk_i,
-        video_a_o   =>  video_a_o,
+        h_video_a_o =>  h_video_a_o,
+        v_video_a_o =>  v_video_a_o,
         hsync_o =>  hsync_o,
         vsync_o =>  vsync_o);
         

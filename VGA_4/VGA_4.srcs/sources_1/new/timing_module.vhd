@@ -56,34 +56,34 @@ constant    PIXEL_PERIOD:   time    :=  (1.0E12/real(PIXEL_CLK)) * 1ps;
 -- Horizontal timings
 constant    SCANLINE_T  :   time    :=  31.77us;    -- Horizontal scanline time
 
-constant    H_A_VIDEO_T :   time    :=  25.17us;    -- Horizontal video active time
-constant    H_F_PORCH_T :   time    :=   0.94us;    -- Horizontal front porch time
-constant    H_S_PULSE_T :   time    :=   3.77us;    -- Horizontal sync pulse time
-constant    H_B_PORCH_T :   time    :=   1.89us;    -- Horizontal back porch
+constant    H_A_VIDEO_T :   time    :=  25.42us;    -- Horizontal video active time
+constant    H_F_PORCH_T :   time    :=   0.63us;    -- Horizontal front porch time
+constant    H_S_PULSE_T :   time    :=   3.81us;    -- Horizontal sync pulse time
+constant    H_B_PORCH_T :   time    :=   1.90us;    -- Horizontal back porch
 
 -- Dividers for clock
-constant    H_A_VIDEO_D :   natural :=  629;--(H_A_VIDEO_T / PIXEL_PERIOD);
-constant    H_F_PORCH_D :   natural :=   23;--(H_F_PORCH_T / PIXEL_PERIOD);
-constant    H_S_PULSE_D :   natural :=   94;--(H_S_PULSE_T / PIXEL_PERIOD);
-constant    H_B_PORCH_D :   natural :=   47;--(H_B_PORCH_T / PIXEL_PERIOD);
+constant    H_A_VIDEO_D :   natural :=  640;--(H_A_VIDEO_T / PIXEL_PERIOD);
+constant    H_F_PORCH_D :   natural :=   16;--(H_F_PORCH_T / PIXEL_PERIOD);
+constant    H_S_PULSE_D :   natural :=   96;--(H_S_PULSE_T / PIXEL_PERIOD);
+constant    H_B_PORCH_D :   natural :=   48;--(H_B_PORCH_T / PIXEL_PERIOD);
 
 -- Maximum possible h_count value to limit range
 constant    H_MAX_DIV   :   natural :=  H_A_VIDEO_D;
 
 
 -- Vertical timings
-constant    FRAME_T     :   time    :=  16.63ms;    -- Whole frametime
+constant    FRAME_T     :   time    :=  16.68ms;    -- Whole frametime
 
-constant    V_A_VIDEO_T :   time    :=  15.22ms;    -- Vertical active video time
-constant    V_F_PORCH_T :   time    :=   0.35ms;    -- Vertical front porch time
+constant    V_A_VIDEO_T :   time    :=  15.25ms;    -- Vertical active video time
+constant    V_F_PORCH_T :   time    :=   0.31ms;    -- Vertical front porch time
 constant    V_S_PULSE_T :   time    :=   0.06ms;    -- Vertical sync pulse time
-constant    V_B_PORCH_T :   time    :=   1.00ms;    -- Vertical back porch time
+constant    V_B_PORCH_T :   time    :=   1.04ms;    -- Vertical back porch time
 
 -- Divider for clock
-constant    V_A_VIDEO_D :   natural :=  479;--(V_A_VIDEO_T / SCANLINE_T);
-constant    V_F_PORCH_D :   natural :=   11;--(V_F_PORCH_T / SCANLINE_T);
-constant    V_S_PULSE_D :   natural :=    1;--(V_S_PULSE_T / SCANLINE_T);
-constant    V_B_PORCH_D :   natural :=   31;--(V_B_PORCH_T / SCANLINE_T);
+constant    V_A_VIDEO_D :   natural :=  480;--(V_A_VIDEO_T / SCANLINE_T);
+constant    V_F_PORCH_D :   natural :=   10;--(V_F_PORCH_T / SCANLINE_T);
+constant    V_S_PULSE_D :   natural :=    2;--(V_S_PULSE_T / SCANLINE_T);
+constant    V_B_PORCH_D :   natural :=   33;--(V_B_PORCH_T / SCANLINE_T);
 
 -- Maximum possible v_count value to limit range
 constant    V_MAX_DIV   :   natural :=  V_A_VIDEO_D;
@@ -179,7 +179,7 @@ begin
 
             h_count <=  h_count + 1;
     
-            if h_count = h_div then
+            if h_count = h_div - 1 then
                 h_count <= 0;
                 h_current_state <= h_next_state;
             end if;
@@ -214,7 +214,7 @@ begin
 
             v_count <=  v_count + 1;
     
-            if v_count = v_div then
+            if v_count = v_div - 1 then
                 v_count <= 0;
                 v_current_state <= v_next_state;
             end if;

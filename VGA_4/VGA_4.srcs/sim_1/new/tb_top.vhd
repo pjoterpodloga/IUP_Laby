@@ -82,6 +82,15 @@ clk_i   <=  not clk_i after PERIOD/2;
 
 stim: process
 begin
+    
+    wait for 20ms;
+    sw_i <= "100";
+    
+    wait for 20ms;
+    sw_i <= "010";
+    
+    wait for 20ms;
+    sw_i <= "001";
 
 wait;
 end process;

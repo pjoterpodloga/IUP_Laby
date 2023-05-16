@@ -37,7 +37,8 @@ entity vga_image_module is
         clk_i       :   in std_logic;
         clk_p       :   in std_logic;
         vsync_i     :   in std_logic;
-        vid_act_i   :   in std_logic;
+        h_active_i  :   in std_logic;
+        v_active_i  :   in std_logic;
         sw_i        :   in std_logic_vector(2 downto 0);
         btn_i       :   in std_logic_vector(3 downto 0);
         red_o       :   out std_logic;
@@ -149,24 +150,23 @@ begin
     
         if clk_p = '0' then
             last_disp_x <= '0';
-        elsif clk_p /= last_disp_x then
+        elsif clk_p /= last_disp_x and h_active_i = '1' then
             last_disp_x <= '1';    
             
             display_x <= display_x + 1;
+            
+            if display_x = DISPLAY_WIDTH then
+                display_y <= display_y + 1;
+            end if;
+            
         end if;
     
-        if display_x = DISPLAY_WIDTH then
+        if h_active_i = '0' then
             display_x <= 0;
-            display_y <= display_y + 1;
-        end if;
-            
-        if display_y = DISPLAY_HEIGHT then
-            display_y <= 0;
         end if;
         
-        if vid_act_i <= '0' then
-            display_x   <=  0;
-            display_y   <=  0;
+        if v_active_i = '0' then
+            display_y <= 0;
         end if;
     
     end if;
@@ -176,7 +176,6 @@ end process;
 image_counting: process(clk_i)
 begin
 
-
     if rising_edge(clk_i) then
     
         if display_state = DISPLAY_IMG then
@@ -184,37 +183,37 @@ begin
             if clk_p = '0' then
                 last_img_x <= '0';
                 
-            elsif clk_p /= last_img_x then
+            elsif clk_p /= last_img_x and h_active_i = '1' then
                 last_img_x <= '1';
+                
+                q_pixel <= q_pixel + 1;
                 
                 image_x <= image_x + 1;
                 
-                q_pixel  <= q_pixel + 1;
+                if image_x = IMAGE_WIDTH then
+                    image_y <= image_y + 1;
+                end if;
+                
+                if q_pixel = PIXEL_PER_BYTE then
+                    q_pixel <= 0;
+                    
+                    pixel_it <= pixel_it + 1;
+                end if;
+                
             end if;
         
         end if;
-    
-        if q_pixel = PIXEL_PER_BYTE then
-            q_pixel <= 0;
-            pixel_it <= pixel_it + 1;
-        end if;
-        
-        if image_x = IMAGE_WIDTH then
+                    
+        if h_active_i = '0' then
             image_x <= 0;
-            image_y <= image_y + 1;
+            q_pixel <= 0;
         end if;
-                
-        if image_y = IMAGE_HEIGHT then
+            
+        if v_active_i = '0' then
             image_y <= 0;
+            pixel_it <= 0;
         end if;
     
-    end if;
-     
-    if vid_act_i <= '0' then
-        image_x     <= 0;
-        image_y     <= 0;
-        pixel_it    <= 0;
-        q_pixel     <= 0;
     end if;
 
 end process;
@@ -224,8 +223,8 @@ begin
 
     if rising_edge(clk_i) then
     
-        if  (display_x >= image_x) and (display_x < image_x + IMAGE_WIDTH) and
-            (display_y >= image_y) and (display_y < image_y + IMAGE_HEIGHT) then
+        if  (display_x >= image_pos_x) and (display_x < image_pos_x + IMAGE_WIDTH) and
+            (display_y >= image_pos_y) and (display_y < image_pos_y + IMAGE_HEIGHT) then
             
             display_state <= DISPLAY_IMG;
             
@@ -249,13 +248,13 @@ begin
         elsif vsync_i /= last_vsync then
             last_vsync <= '0';
             
-            if (btn_i(0) = '0' and image_pos_x /= 0) then
+            if    (btn_i(3) = '1' and image_pos_x /= 0) then
                 image_pos_x <= image_pos_x - 1;                             -- left
-            elsif (btn_i(1) = '0' and image_pos_y /= 0) then
+            elsif (btn_i(2) = '1' and image_pos_y /= 0) then
                 image_pos_y <= image_pos_y - 1;                             -- down
-            elsif (btn_i(2) = '0' and image_pos_y /= MAX_IMAGE_H) then    
+            elsif (btn_i(1) = '1' and image_pos_y /= MAX_IMAGE_H) then
                 image_pos_y <= image_pos_y + 1;                             -- up
-            elsif (btn_i(3) = '0' and image_pos_x /= MAX_IMAGE_W) then
+            elsif (btn_i(0) = '1' and image_pos_x /= MAX_IMAGE_W) then
                 image_pos_x <= image_pos_x + 1;                             -- right
             end if;
             

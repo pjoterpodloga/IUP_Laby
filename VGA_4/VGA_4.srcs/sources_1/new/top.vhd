@@ -90,8 +90,9 @@ component vga_image_module is
     Port (
         clk_i       :   in std_logic;
         clk_p       :   in std_logic;
-        vsync_i     :   in std_logic;
-        vid_act_i   :   in std_logic;
+        vsync_i     :   in std_logic;        
+        h_active_i  :   in std_logic;
+        v_active_i  :   in std_logic;
         sw_i        :   in std_logic_vector(2 downto 0);
         btn_i       :   in std_logic_vector(3 downto 0);
         red_o       :   out std_logic;
@@ -160,7 +161,8 @@ vga_module:     vga_image_module
         clk_i       =>  clk_i,
         clk_p       =>  clk_p,
         vsync_i     =>  vsync,
-        vid_act_i   =>  v_video_active,
+        h_active_i  =>  h_video_active,
+        v_active_i  =>  v_video_active,
         sw_i        =>  sw_i,
         btn_i       =>  btn_i,
         red_o       =>  red,

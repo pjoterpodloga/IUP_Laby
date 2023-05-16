@@ -1,6 +1,6 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_timing_clk_behav xil_defaultlib.tb_timing_clk -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,50 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.std_logic_textio
-Compiling architecture behavioral of entity xil_defaultlib.synchronizer_module [\synchronizer_module(2,0)(2,0)\]
-Compiling architecture behavioral of entity xil_defaultlib.synchronizer_module [\synchronizer_module(3,0)(3,0)\]
-Compiling architecture behavioral of entity xil_defaultlib.clk_div [\clk_div(clk_out=25000000)\]
 Compiling architecture behavioral of entity xil_defaultlib.timing_module [timing_module_default]
-Compiling architecture gnd_v of entity unisim.GND [gnd_default]
-Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00001000")(0,7)\]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_bindec [vga_bitmap_bindec_default]
-Compiling architecture muxf7_v of entity unisim.MUXF7 [muxf7_default]
-Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10111000")(0,7)\]
-Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0010111100100000")(0...]
-Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_mux [vga_bitmap_blk_mem_gen_mux_defau...]
-Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="000...]
-Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="0000000000000...]
-Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0001")(0,3)\]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_prim_wrapper_init [vga_bitmap_blk_mem_gen_prim_wrap...]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_prim_width [vga_bitmap_blk_mem_gen_prim_widt...]
-Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="111...]
-Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="1111111111111...]
-Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0100")(0,3)\]
-Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized0\ [\vga_bitmap_blk_mem_gen_prim_wra...]
-Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_width__parameterized0\ [\vga_bitmap_blk_mem_gen_prim_wid...]
-Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="101...]
-Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="1010101010101...]
-Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized1\ [\vga_bitmap_blk_mem_gen_prim_wra...]
-Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_width__parameterized1\ [\vga_bitmap_blk_mem_gen_prim_wid...]
-Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
-Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(init_00="1101110111011...]
-Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_wrapper_init__parameterized2\ [\vga_bitmap_blk_mem_gen_prim_wra...]
-Compiling architecture structure of entity xil_defaultlib.\vga_bitmap_blk_mem_gen_prim_width__parameterized2\ [\vga_bitmap_blk_mem_gen_prim_wid...]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_generic_cstr [vga_bitmap_blk_mem_gen_generic_c...]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_top [vga_bitmap_blk_mem_gen_top_defau...]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_v8_4_5_synth [vga_bitmap_blk_mem_gen_v8_4_5_sy...]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap_blk_mem_gen_v8_4_5 [vga_bitmap_blk_mem_gen_v8_4_5_de...]
-Compiling architecture structure of entity xil_defaultlib.vga_bitmap [vga_bitmap_default]
-Compiling architecture behavioral of entity xil_defaultlib.vga_image_module [vga_image_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_top
-Built simulation snapshot tb_top_behav
+Compiling architecture behavioral of entity xil_defaultlib.tb_timing_clk
+Built simulation snapshot tb_timing_clk_behav
