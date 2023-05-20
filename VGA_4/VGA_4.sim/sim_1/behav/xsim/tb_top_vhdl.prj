@@ -1,11 +1,11 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../VGA_4.gen/sources_1/ip/vga_bitmap/vga_bitmap_sim_netlist.vhdl" \
 "../../../../VGA_4.srcs/sources_1/new/top.vhd" \
 "../../../../VGA_4.srcs/sources_1/new/clk_div.vhd" \
 "../../../../VGA_4.srcs/sources_1/new/timing_module.vhd" \
 "../../../../VGA_4.srcs/sources_1/new/synchronizer_module.vhd" \
 "../../../../VGA_4.srcs/sources_1/new/vga_image_module.vhd" \
-"../../../../VGA_4.gen/sources_1/ip/vga_bitmap/vga_bitmap_sim_netlist.vhdl" \
 "../../../../VGA_4.srcs/sim_1/new/tb_clk_div.vhd" \
 "../../../../VGA_4.srcs/sim_1/new/tb_timing_clk.vhd" \
 "../../../../VGA_4.srcs/sim_1/new/tb_synchronizer.vhd" \

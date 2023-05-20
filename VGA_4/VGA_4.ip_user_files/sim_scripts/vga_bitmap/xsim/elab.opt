@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto  -L xil_defaultlib -L secureip -L xpm --snapshot vga_bitmap xil_defaultlib.vga_bitmap -log elaborate.log

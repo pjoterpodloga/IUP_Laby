@@ -155,10 +155,11 @@ begin
             
             display_x <= display_x + 1;
             
-            if display_x = DISPLAY_WIDTH then
-                display_y <= display_y + 1;
-            end if;
-            
+        end if;
+        
+        if display_x = DISPLAY_WIDTH then
+            display_x <= 0;
+            display_y <= display_y + 1;
         end if;
     
         if h_active_i = '0' then
@@ -190,28 +191,32 @@ begin
                 
                 image_x <= image_x + 1;
                 
-                if image_x = IMAGE_WIDTH then
-                    image_y <= image_y + 1;
-                end if;
-                
-                if q_pixel = PIXEL_PER_BYTE then
-                    q_pixel <= 0;
-                    
-                    pixel_it <= pixel_it + 1;
-                end if;
-                
             end if;
         
         end if;
-                    
-        if h_active_i = '0' then
+        
+        if image_x = IMAGE_WIDTH then
             image_x <= 0;
-            q_pixel <= 0;
+            image_y <= image_y + 1;
         end if;
-            
-        if v_active_i = '0' then
+        
+        if image_y = IMAGE_HEIGHT then
             image_y <= 0;
+        end if;
+        
+        if q_pixel = PIXEL_PER_BYTE then
+            q_pixel <= 0;
+            pixel_it <= pixel_it + 1;
+        end if;
+        
+        if h_active_i = '0' then
+            q_pixel <= 0;
             pixel_it <= 0;
+        end if;
+        
+        if v_active_i = '0' then
+            image_x <= 0;
+            image_y <= 0;
         end if;
     
     end if;

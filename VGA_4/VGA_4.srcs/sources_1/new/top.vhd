@@ -163,8 +163,8 @@ vga_module:     vga_image_module
         vsync_i     =>  vsync,
         h_active_i  =>  h_video_active,
         v_active_i  =>  v_video_active,
-        sw_i        =>  sw_i,
-        btn_i       =>  btn_i,
+        sw_i        =>  sw_sync,
+        btn_i       =>  btn_sync,
         red_o       =>  red,
         green_o     =>  green,
         blue_o      =>  blue);
