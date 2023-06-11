@@ -40,8 +40,7 @@ entity freq_div is
         clk_i   :   in  std_logic;
         clk_en  :   in  std_logic;
         rst_i   :   in  std_logic;
-        clk_o   :   out std_logic;
-        nclk_o  :   out std_logic);
+        clk_o   :   out std_logic);
 end freq_div;
 
 architecture Behavioral of freq_div is
@@ -92,6 +91,5 @@ begin
 end process;
 
 clk_o   <=  d_state;
-nclk_o  <=  not d_state;
 
 end Behavioral;

@@ -35,7 +35,6 @@ entity bus_controller is
     Port (
         clk_i   :   in  std_logic;
         baud_i  :   in  std_logic;
-        nbaud_i :   in  std_logic;
         RXD_i   :   in  std_logic;
         data_i  :   in  std_logic_vector(7 downto 0);
         TXD_o   :   out std_logic;
@@ -150,7 +149,7 @@ begin
     
 end process;
 
-transmit_data: process(clk_i, nbaud_i)
+transmit_data: process(clk_i, baud_i)
 begin
 
     if rising_edge(clk_i) then
