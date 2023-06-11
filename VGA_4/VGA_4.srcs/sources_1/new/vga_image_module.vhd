@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Piotr Buluk, Jakub Cichocki
 -- 
 -- Create Date: 11.05.2023 20:03:01
 -- Design Name: 
@@ -106,7 +106,11 @@ constant    DISPLAY_HEIGHT  :   natural :=  480;
 constant    MAX_IMAGE_W     :   natural :=  DISPLAY_WIDTH  - IMAGE_WIDTH;
 constant    MAX_IMAGE_H     :   natural :=  DISPLAY_HEIGHT - IMAGE_HEIGHT;
 
+constant    HEADER_SIZE     :   natural :=  54;
+
 constant    IMAGE_SIZE      :   natural :=  IMAGE_WIDTH * IMAGE_HEIGHT / PIXEL_PER_BYTE;
+
+constant    IMAGE_START_IT  :   natural := IMAGE_SIZE + HEADER_SIZE - 64;
 
 type    display_state_enum  is  (DISPLAY_BG, DISPLAY_IMG);
 
@@ -127,7 +131,7 @@ signal  last_vsync  :   std_logic   :=  '1';
 signal  display_state   :   display_state_enum  :=  DISPLAY_BG;
 
 signal  q_pixel     :   natural range PIXEL_PER_BYTE    downto 0   :=  0;
-signal  pixel_it    :   natural range IMAGE_SIZE        downto 0   :=  0;
+signal  pixel_it    :   natural range IMAGE_SIZE        downto 0   :=  IMAGE_START_IT;
 signal  address     :   std_logic_vector(13 downto 0);
 
 signal  data        :   std_logic_vector(7 downto 0)    :=  (others => '0');
@@ -156,10 +160,10 @@ begin
             display_x <= display_x + 1;
             
         end if;
-        
+    
         if display_x = DISPLAY_WIDTH then
-            display_x <= 0;
-            display_y <= display_y + 1;
+             display_x <= 0;
+             display_y <= display_y + 1;
         end if;
     
         if h_active_i = '0' then
@@ -167,6 +171,7 @@ begin
         end if;
         
         if v_active_i = '0' then
+            display_x <= 0;
             display_y <= 0;
         end if;
     
@@ -195,28 +200,26 @@ begin
         
         end if;
         
-        if image_x = IMAGE_WIDTH then
-            image_x <= 0;
-            image_y <= image_y + 1;
-        end if;
-        
-        if image_y = IMAGE_HEIGHT then
-            image_y <= 0;
-        end if;
-        
         if q_pixel = PIXEL_PER_BYTE then
             q_pixel <= 0;
             pixel_it <= pixel_it + 1;
         end if;
         
+        if image_x = IMAGE_WIDTH then
+            image_x <= 0;
+            image_y <= image_y + 1;
+            pixel_it <= pixel_it - IMAGE_WIDTH + 1;
+        end if;
+        
         if h_active_i = '0' then
+            image_x <= 0;
             q_pixel <= 0;
-            pixel_it <= 0;
         end if;
         
         if v_active_i = '0' then
             image_x <= 0;
             image_y <= 0;
+            pixel_it <= IMAGE_START_IT;
         end if;
     
     end if;
@@ -253,13 +256,13 @@ begin
         elsif vsync_i /= last_vsync then
             last_vsync <= '0';
             
-            if    (btn_i(3) = '1' and image_pos_x /= 0) then
+            if    (btn_i(0) = '1' and image_pos_x /= 0) then
                 image_pos_x <= image_pos_x - 1;                             -- left
             elsif (btn_i(2) = '1' and image_pos_y /= 0) then
                 image_pos_y <= image_pos_y - 1;                             -- down
             elsif (btn_i(1) = '1' and image_pos_y /= MAX_IMAGE_H) then
                 image_pos_y <= image_pos_y + 1;                             -- up
-            elsif (btn_i(0) = '1' and image_pos_x /= MAX_IMAGE_W) then
+            elsif (btn_i(3) = '1' and image_pos_x /= MAX_IMAGE_W) then
                 image_pos_x <= image_pos_x + 1;                             -- right
             end if;
             
