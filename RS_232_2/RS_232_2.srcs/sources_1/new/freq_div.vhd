@@ -52,7 +52,6 @@ signal d_q      :   natural range NDIV downto 0 := 0;
 signal d_reset  :   boolean := false;
 
 signal d_state  :   std_logic   := '0';
-signal d_state_s:   std_logic   := '0';
 
 begin
 
@@ -75,12 +74,6 @@ begin
             d_state <= '0';
         elsif d_q = NDIV/2 then
             d_state <= '1';
-        end if;
-        
-        if d_q = NDIV/4 then
-            d_state_s <= '1';
-        elsif d_q = 3*NDIV/4 then
-            d_state_s <= '0';
         end if;
         
     end if;

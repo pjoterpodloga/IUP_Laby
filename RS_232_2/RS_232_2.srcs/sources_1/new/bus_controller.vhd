@@ -70,6 +70,9 @@ signal input_data   :   byte    :=  (others => '0');
 signal TXD  :   std_logic   := '1';
 signal RXD  :   std_logic;
 
+signal last_baud_tx :   std_logic   :=  '0';
+signal last_baud_rx :   std_logic   :=  '0';
+
 signal strobe_reset : std_logic := '0';
 signal strobe_set   : std_logic := '0';
 
@@ -115,27 +118,33 @@ end process;
 recive_data: process(clk_i, baud_i)
 begin
     
-    if rising_edge(baud_i) then
+    if rising_edge(clk_i) then
     
-        if trans_rx_state = rs232_active then
-            case rs232_current_rx_state is
-                when rs232_start    =>  strobe_set <= '0';
-                when rs232_d0       =>  input_data(0) <= RXD;   
-                when rs232_d1       =>  input_data(1) <= RXD;
-                when rs232_d2       =>  input_data(2) <= RXD;
-                when rs232_d3       =>  input_data(3) <= RXD;
-                when rs232_d4       =>  input_data(4) <= RXD;
-                when rs232_d5       =>  input_data(5) <= RXD;
-                when rs232_d6       =>  input_data(6) <= RXD;
-                when rs232_d7       =>  input_data(7) <= RXD;
-                when rs232_stop     =>  strobe_set <= '1';      data_o <= input_data;
-                when others         =>  null;
-            end case;
-            
-            rs232_current_rx_state <= rs232_next_rx_state;
-        end if;    
+        if baud_i = '0' then
+            last_baud_rx <= '0';
+    
+        elsif last_baud_rx /= baud_i then
+            last_baud_rx <= baud_i;
+    
+            if trans_rx_state = rs232_active then
+                case rs232_current_rx_state is
+                    when rs232_start    =>  strobe_set <= '0';
+                    when rs232_d0       =>  input_data(0) <= RXD;   
+                    when rs232_d1       =>  input_data(1) <= RXD;
+                    when rs232_d2       =>  input_data(2) <= RXD;
+                    when rs232_d3       =>  input_data(3) <= RXD;
+                    when rs232_d4       =>  input_data(4) <= RXD;
+                    when rs232_d5       =>  input_data(5) <= RXD;
+                    when rs232_d6       =>  input_data(6) <= RXD;
+                    when rs232_d7       =>  input_data(7) <= RXD;
+                    when rs232_stop     =>  strobe_set <= '1';      data_o <= input_data;
+                    when others         =>  null;
+                end case;
+                
+                rs232_current_rx_state <= rs232_next_rx_state;
+            end if;    
         
-
+        end if;
         
     end if;
     
@@ -144,24 +153,32 @@ end process;
 transmit_data: process(clk_i, nbaud_i)
 begin
 
-    if rising_edge(nbaud_i) then
+    if rising_edge(clk_i) then
     
-        if trans_tx_state = rs232_active then
-            case rs232_current_tx_state is            
-                when rs232_start    =>  TXD <= '0';             strobe_reset <= '1';           
-                when rs232_d0       =>  TXD <= output_data(0);  strobe_reset <= '0';  
-                when rs232_d1       =>  TXD <= output_data(1);
-                when rs232_d2       =>  TXD <= output_data(2);
-                when rs232_d3       =>  TXD <= output_data(3);
-                when rs232_d4       =>  TXD <= output_data(4);
-                when rs232_d5       =>  TXD <= output_data(5);
-                when rs232_d6       =>  TXD <= output_data(6);
-                when rs232_d7       =>  TXD <= output_data(7);
-                when rs232_stop     =>  TXD <= '1';
-                when others         =>  null;
-            end case;
+        if baud_i = '1' then
+            last_baud_tx <= '1';
             
-            rs232_current_tx_state <= rs232_next_tx_state;
+        elsif last_baud_tx /= baud_i then 
+            last_baud_tx <= baud_i;
+    
+            if trans_tx_state = rs232_active then
+                case rs232_current_tx_state is            
+                    when rs232_start    =>  TXD <= '0';             strobe_reset <= '1';           
+                    when rs232_d0       =>  TXD <= output_data(0);  strobe_reset <= '0';  
+                    when rs232_d1       =>  TXD <= output_data(1);
+                    when rs232_d2       =>  TXD <= output_data(2);
+                    when rs232_d3       =>  TXD <= output_data(3);
+                    when rs232_d4       =>  TXD <= output_data(4);
+                    when rs232_d5       =>  TXD <= output_data(5);
+                    when rs232_d6       =>  TXD <= output_data(6);
+                    when rs232_d7       =>  TXD <= output_data(7);
+                    when rs232_stop     =>  TXD <= '1';
+                    when others         =>  null;
+                end case;
+                
+                rs232_current_tx_state <= rs232_next_tx_state;
+            end if;
+            
         end if;
     
     end if;
